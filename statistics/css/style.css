@@ -1,0 +1,757 @@
+/* ---- Horizontal Version ---- */
+/*  컨텐츠 영역  */
+.horizontal .map_wrap{
+	width: 100%;
+	margin-bottom: 14px;
+}
+.horizontal .img_wrap{
+	float: left;
+	width: 1106px;  
+	height: 448px;
+	margin-right: 14px; 
+	background: url(../img/01_realtime_none_info_union.png) no-repeat;          
+}
+.horizontal .info_wrap{
+	float: right;
+}
+.horizontal .info_box{
+    width: 546px;
+	height: 138px; 
+	background-color: rgba(255,255,255,.03);
+	border-top: 1px solid #1b2f3f; 
+	border-bottom: 1px solid #030b11; 
+	margin-bottom: 14px;
+}
+.horizontal .disaster_wrap{
+	position: relative;
+    width: 546px;
+    /*height: 263px;*/
+    height: 294px;
+    background-color: #052237 ;
+    border-top: 1px solid #1b2f3f; 
+	border-bottom: 1px solid #030b11; 
+	box-sizing: border-box;
+	/*padding: 16px 0 13px 25px;*/
+}
+
+/*  지도  */
+.map_header{
+	height: 36px;
+	background-color: rgba(255,255,255,.08);
+}
+.map_location{
+	display: inline-block;
+	font-family: 'NanumSquareR';
+	font-size: 12px;
+	line-height: 36px;
+	color: #567894;
+	padding-left: 46px;
+	background: url(../../common/img/00_title_map_icon.png) no-repeat 27px 12px;
+}
+.horizontal .map{
+	position: relative;
+	height: 412px;
+	border: 1px solid #003758;
+	box-sizing: border-box;
+}
+.map .legend{
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	/*width: 96px;*/
+	height: 158px;
+	background-color: rgba(0,0,0,.85);
+}
+.map .legend ul{
+	/*width: 55px;*/
+	height: 112px;
+	margin: 0 auto;
+	padding: 23px 20px 24px;
+}
+.map .legend li{
+	font-family: 'NanumSquareR';
+	font-size: 12px;
+	color: #8fabbf;
+	padding-left: 22px;
+	margin-bottom: 8px
+}
+.map .legend li.focus{
+	color: #2189ff;
+}
+.map .legend li.focus .fa_num{
+	color: #2189ff;
+}
+.map .legend .fa_num{
+	float: right;
+    margin-left: 16px;
+}
+
+/*  이미지 영역  */
+.img_wrap > ul{
+	overflow: hidden;
+	margin-top: -14px;
+	margin-left: -14px;
+}
+.img_wrap > ul > li{
+	position: relative;
+	float: left;
+	width: 266px;
+	height: 140px;
+    margin-top: 14px;
+    margin-left: 14px;
+	border: 1px solid #133954;
+	box-sizing: border-box;
+}
+.img_wrap .none_pic{
+	background: url(../img/01_realtime_icon_none_picture.png) no-repeat center;
+}
+/*.img_wrap .none_fa{
+	background: url(../img/01_realtime_icon_none_info.png) no-repeat 91px 8px;
+}*/
+.img_wrap .none_fa > p{
+	font-size: 12px;
+	color: #87aac7;
+	letter-spacing: 0.5px;
+	line-height: 16px;
+	text-align: center;
+	margin-top: 94px;
+}
+.img_wrap .none_fa .img_info{
+	display: none;
+}
+.img_info{
+	position: absolute;
+	width: 84px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	padding: 0 13px;
+	background-color: rgba(1,11,18,.75);
+}
+.img_info .img_tit{
+	position: relative;
+	height: 92px;
+	font-family: 'NanumSquareR';
+	font-size: 15px;
+	line-height: 23px;
+	color: #fff;
+	padding-top: 7px;
+	display: -webkit-box;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.realtime{
+	overflow: hidden;
+	/*margin-bottom: 39px;*/
+    bottom: 12px;
+    position: absolute;
+}
+.realtime li{
+	float: left;
+	width: 22px;
+	height: 22px;
+}
+.realtime .icon_meter{
+	background: url(../img/01_realtime_icon_meter_normality.png) no-repeat;
+	margin-right: 13px;
+}
+.realtime .icon_set{
+	background: url(../img/01_realtime_icon_overhaul_normality.png) no-repeat;
+}
+.realtime .icon_meter.error{
+	background: url(../img/01_realtime_icon_meter_error.png) no-repeat;
+}
+.realtime .icon_set.error{
+	background: url(../img/01_realtime_icon_overhaul_error.png) no-repeat;
+}
+.img_info .btn_detail{
+	font-family: 'NanumSquareB';
+	font-size: 9px;
+	line-height: 9px;
+	color: #aaacad;
+	text-decoration: underline;
+	letter-spacing: 0.5px;
+	vertical-align: top;
+}
+
+/*  날씨  */
+.horizontal .info_top{
+	height: 22px;
+	padding: 14px 25px 0;
+	margin-bottom: 30px;
+}
+.horizontal .info_top > ul{
+	float: left;
+	margin-left: -16px;
+}
+.horizontal .info_top > ul > li{
+	float: left;
+	margin-left: 6px;
+}
+.horizontal .info_top > ul > li:first-child{
+	margin-left: 16px;
+}
+/* .horizontal .info_top select{
+	font-size: 12px;
+	color: #567894;
+	letter-spacing: 1px;
+	background-color: transparent;
+	padding-right: 15px;
+	border: none;
+	cursor: pointer;
+}
+.info_top select:focus{
+	outline: none;
+} */
+/* .info_top select{
+	-webkit-appearance: none; 네이티브 외형 감추기 
+	-moz-appearance: none; 
+	appearance: none; 
+	background: url(../img/01_realtime_arrow_dropbox.png) no-repeat 100% 50%; 화살표 모양의 이미지 
+} */
+.select_link {
+    position: relative;
+    float: right;
+    width: auto;
+    margin-top: -4px;
+    z-index: 1;
+}
+.select_link.select01{
+	width: 69px;
+}
+.select_link.select02, .select_link.select04{
+	width: 56px;
+}
+.select_link.select03{
+	width: 44px;
+}
+.vertical .select_link.select01{
+	width: 60px;
+}
+.vertical .select_link.select02{
+	width: 49px;
+}
+.vertical .select_link.select03{
+	width: 39px;
+}
+.vertical .select_link.select04{
+	width: 49px;
+}
+.info_box .selectric {
+    background-color: transparent;
+    border: none;
+}
+.info_box .selectric .label {
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    color: #87aac7;
+    letter-spacing: 1px;
+    height: 22px;
+    line-height: 22px;
+    /*padding-left: 6px;*/
+    margin: 0;
+}
+.vertical .info_box .selectric .label{
+	font-size: 11px;
+	letter-spacing: 0.5px;
+}
+.info_box .selectric .button {
+    width: 12px;
+    height: 12px;
+    color: #d3e5f5;
+    top: 5px;
+    right: 5px;
+}
+.info_box .selectric .button:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: url(../img/01_realtime_arrow_dropbox.png) no-repeat;
+}
+.info_box .selectric-items li {
+    min-height: 0;
+    font-family: 'NanumSquareB';
+    font-size: 11px;
+    line-height: 11px;
+    color: #527c9e;
+    display: block;
+    padding: 6px 9px 5px;
+    background-color: #083657;
+}
+.info_box .selectric-items li:hover{
+	background-color: #072e4a;
+	color: #527c9e;
+}
+.info_box .selectric-items li.highlighted, .info_box .selectric-items li.selected {
+    background-color: #083657;
+    color: #fff;
+}
+.info_box .selectric-items{
+	border: none;
+	box-shadow: none;
+}
+
+.horizontal .btn_chk{
+	float: right;
+	width: 56px;
+	height: 24px;
+	font-size: 12px;
+	color: #e8edf2;
+	text-align: center;
+	background-color: #1272e0;
+	border-radius: 2px;
+	margin-top: -6px;
+}
+.horizontal .weather{
+	padding: 0 25px;
+}
+.horizontal .weather .area{
+	position: relative;
+	float: left;
+}
+.horizontal .weather .tem_info{
+	position: relative;
+	float: right;
+	width: 256px;
+	height: 31px;
+	padding-top: 8px;
+	border-top: 1px solid #294964;
+}
+.horizontal .weather .tem_info:before{
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 68px;
+	height: 1px;
+	background-color: #1272e0;
+}
+.horizontal .weather .tem_info p{
+	display: inline-block;
+}
+.horizontal .weather .city{
+	display: block;
+	font-size: 12px;
+	line-height: 12px;
+	color: #7eace0;
+	letter-spacing: 0.5px;
+	margin-bottom: 7px;
+}
+.horizontal .weather .district{
+	display: inline-block;
+	font-family: 'NanumSquareL';
+	font-size: 22px;
+	line-height: 22px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.horizontal .icon_weather{
+	position: absolute;
+	right: -56px;
+	top: -2px;
+	width: 68px;
+	height: 68px;
+	background: url(../img/01_realtime_icon_weather_cloud_day_small.png) no-repeat;
+}
+.horizontal .weather .tem_info ul{
+	float: left;
+}
+.temp_txt{
+	float: left;
+	font-family: 'NanumSquareL';
+	font-size: 40px;
+	line-height: 40px;
+	color: #fff;
+	letter-spacing: 0.25px;
+	margin: -2px 16px 0 0;
+}
+.temp_txt .cel{
+	font-family: 'NanumSquareR';
+	font-size: 20px;
+	color: #fff;
+}
+.horizontal ul.temp_cast{
+	font-family: 'NanumSquareR';
+	font-size: 13px;
+	color: #7298b8;
+	letter-spacing: 0.5px;
+	margin-top: -5px;
+}
+.temp_cast li{
+	line-height: 13px;
+	margin-top: 5px;
+}
+.humi_per{
+	color: #c5cedc;
+}
+.wind_dir{
+	position: relative;
+	color: #c5cedc;
+}
+.wind_arrow{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../img/01_realtime_arrow_wind_direction.png) no-repeat center;
+	transform-origin: center;
+    background-size: 100% 100%;
+    padding: 0;
+    margin: 0 -3px;
+}
+.wind_vec{
+	color: #c5cedc;
+}
+
+/*  지진/해일 정보 테이블  */
+#info > p{
+	display: none;
+}
+.none_info{
+	display: table;
+	width: 100%;
+	height: 238px;
+	text-align: center;
+}
+#info.none_info p{
+	background: url(../img/01_realtime_icon_no_data.png) no-repeat 154px center;
+	color: #6b8399;
+    vertical-align: middle;
+    display: table-cell;
+}
+#info.none_info table, #info.none_info .table_box{
+	display: none;
+}
+.dis_tit{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 14px;
+	color: #87aac7;
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+}
+.table_box{
+	height: 202px;
+}
+.dis_table{
+	width: 494px;
+}
+.dis_table.mgb4{
+	margin-bottom: 4px;
+}
+.dis_table .text_l{
+	text-align: left;
+	padding-left: 15px;
+}
+.dis_table tr td:first-child{
+	text-align: left;
+	padding-left: 15px;
+}
+.dis_table tbody tr{
+	border-bottom: 1px solid #0a3452;
+}
+.dis_table th{
+	height: 34px;
+	font-size: 13px;
+	line-height: 34px;
+	color: #53748f;
+	background-color: #082c45;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.dis_table td{
+	font-size: 13px;
+	line-height: 13px;
+	color: #dee7ee;
+	text-align: center;
+	padding: 4px 0;
+}
+.dis_table .btn_view{
+	width: 56px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #e8edf2;
+	letter-spacing: 1px;
+	text-align: center;
+	border-radius: 2px;
+	background: #1272e0;
+}
+.table_box .mCSB_scrollTools{
+	width: 26px;
+}
+.table_box .mCSB_scrollTools .mCSB_draggerContainer{
+    top: -12px;
+}
+.table_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 7px;
+    border-radius: 2px;
+    background-color: #47637a;
+}
+.table_box .mCSB_scrollTools .mCSB_draggerRail{
+	background-color: #183954;
+}
+
+
+/* ---- Vertical Version ---- */
+/*  컨텐츠 영역  */
+.vertical .map_wrap{
+	float: left;
+	width: 826px;
+	margin-right: 14px;
+}
+.vertical .realtime_con_wrap{
+	width: 826px;
+	float: left;
+	overflow: hidden;
+}
+.vertical .info_wrap{
+	float: left;
+	width: 826px;
+	margin-bottom: 14px;
+}
+.vertical .img_wrap{
+	float: left;
+	width: 826px;         
+}
+.vertical .info_box{
+	float: left;
+    width: 216px;
+	height: 278px; 
+	background-color: rgba(255,255,255,.03);
+	border-top: 1px solid #1b2f3f; 
+	border-bottom: 1px solid #030b11; 
+	margin-right: 14px;
+	padding: 14px 25px 0;
+}
+.vertical .disaster_wrap{
+	position: relative;
+	float: left;
+    width: 546px;
+    /*height: 263px;*/
+    height: 294px;
+    background-color: #052237 ;
+    border-top: 1px solid #1b2f3f; 
+	border-bottom: 1px solid #030b11; 
+	box-sizing: border-box;
+	/*padding: 16px 0 13px 25px;*/
+}
+
+/*  지도  */
+.vertical .map{
+    position: relative;
+    height: 874px;
+    border: 1px solid #003758;
+    box-sizing: border-box;
+}
+
+/*  날씨  */
+.vertical .info_top{
+	margin-bottom: 32px;
+	/* overflow: hidden; */
+}
+.vertical .info_top > ul{
+	position: relative;
+	float: left;
+	margin-left: -11px;
+	padding-bottom: 17px;
+}
+.vertical .info_top > ul:after{
+	content: '';
+	position: absolute;
+	bottom: 9px;
+	left: 12px;
+	width: 214px;
+	height: 1px;
+	background-color: #294964;
+}
+.vertical .info_top > ul > li{
+	float: left;
+	margin-left: 7px;
+}
+.vertical .info_top > ul > li:first-child{
+	margin-left: 9px;
+}
+/* .vertical .info_top select{
+	font-size: 11px;
+	color: #567894;
+	letter-spacing: 0.5px;
+	background-color: transparent;
+	padding-right: 15px;
+	border: none;
+	cursor: pointer;
+} */
+.vertical .btn_chk{
+	width: 100%;
+	height: 24px;
+	font-size: 12px;
+	color: #e8edf2;
+	text-align: center;
+	background-color: #1272e0;
+	border-radius: 2px;
+}
+.vertical .weather .area{
+	position: relative;
+}
+.vertical .weather .tem_info{
+	position: relative;
+	padding-top: 98px;
+	overflow: hidden;
+}
+.vertical .weather .tem_info:before{
+	content: '';
+	position: absolute;
+	top: 13px;
+	left: 0;
+	width: 20px;
+	height: 1px;
+	background-color: #1272e0;
+}
+.vertical .weather .tem_info p{
+	display: inline-block;
+    margin-top: -6px;
+}
+.vertical .weather .city{
+	display: block;
+	font-size: 12px;
+	line-height: 12px;
+	color: #7eace0;
+	letter-spacing: 0.5px;
+	margin-bottom: 7px;
+}
+.vertical .weather .district{
+	display: inline-block;
+	font-family: 'NanumSquareL';
+	font-size: 22px;
+	line-height: 22px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.vertical .icon_weather{
+	position: absolute;
+	right: 0;
+	top: -10px;
+	width: 68px;
+	height: 68px;
+	background: url(../img/01_realtime_icon_weather_cloud_day_big.png) no-repeat;
+}
+.vertical ul.temp_cast{
+	float: left;
+	font-family: 'NanumSquareR';
+	font-size: 13px;
+	color: #7298b8;
+	letter-spacing: 0.5px;
+	margin-top: -8px;
+}
+
+
+/* 탭 추가 */
+.disaster_wrap:after{
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #0a3452;
+}
+.disaster_wrap .tab {
+    background-color: #031e30;
+    padding-top: 3px;
+    padding-left: 17px;
+    overflow: hidden;
+}
+.disaster_wrap .cons{
+	height: 250px;
+	padding: 7px 0 0 26px;
+}
+.disaster_wrap .tab li{
+	float: left;
+}
+.disaster_wrap .tab li a {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 12px;
+    color: #87aac7;
+    letter-spacing: 0.5px;
+    padding: 10px 15px 11px 16px;
+}
+.disaster_wrap .tab .active{
+	color: #147bf2;
+}
+.disaster_wrap .tab .active:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #147bf2;
+    z-index: 1;
+}
+
+/* News Feed */
+.none_news{
+	display: table;
+	width: 100%;
+	height: 238px;
+	text-align: center;
+}
+#news p{
+	display: none;
+}
+#news.none_news p{
+	background: url(../img/01_realtime_icon_no_data.png) no-repeat 135px center;
+	color: #6b8399;
+    vertical-align: middle;
+    display: table-cell;
+}
+#news.none_news .news{
+	display: none;
+}
+.news{
+	height: 238px;
+	text-align: left;
+}
+.news li{
+	width: 494px;
+	height: 34px;
+	line-height: 34px;
+	font-family: 'NanumSquareR';
+	font-size: 13px;
+	color: #cfdae5;
+	letter-spacing: 0.25px;
+    padding: 0 17px;
+    box-sizing: border-box;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-break: break-all;
+}
+.news li:nth-child(odd){
+	background-color: #082c45;
+}
+#news .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width: 7px;
+    border-radius: 2px;
+    background-color: #47637a;
+}
+#news .mCSB_scrollTools .mCSB_draggerContainer{
+    top: -8px;
+	left: -10px;
+}
+#news .mCSB_scrollTools .mCSB_draggerRail{
+	background-color: #183954;
+}

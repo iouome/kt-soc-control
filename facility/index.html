@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="KT" />
+	<meta name="description" content="KT" />
+	<title>GiGA Safe SOC</title>
+	<link rel="stylesheet" href="../common/css/common.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/datepicker/jquery-ui.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/select/selectric.css" type="text/css">
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/popper.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<script src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../common/js/marquee/jquery.marquee.min.js"></script>
+	<script src="../common/js/highcharts/highcharts.js"></script>
+	<script src="../common/js/datepicker/jquery-ui.js"></script>
+	<script src="../common/js/select/jquery.selectric.js"></script>
+	<script src="./js/facility.js"></script>
+	<script src="../common/js/main.js"></script>
+</head>
+<body class="body">
+	<div id="wrap">
+		<header id="header">
+			<h1 class="logo">
+				<img src="../common/img/00_logo.png" alt="KT GIGA Safe SOC 로고 이미지">
+			</h1>
+			<h2 class="service_nm">포항시지진재난관리국</h2>
+			<div class="alert alert-dismissible fade show noti_alert" role="alert">
+				<span class="emergency">긴급</span>
+			  	[관리자] 금일 오후 4시 컨퍼런스 미팅 장소가 변경되었음을 알립니다.
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="func">
+				<a class="btn_admin" data-toggle="modal" data-target="#chg_admin_modal"></a>
+				<a class="btn_disaster_mode" data-toggle="modal" data-target="#mode_modal"></a>
+				<div class="alarm">
+					<a href="#" class="alarm_popover">
+						<img src="../common/img/00_GNB_icon_alram.png" alt="알람 아이콘 이미지">
+						<span class="badge badge-danger alarm_badge">14</span>
+					</a>
+				</div>
+				<div id="popover_content">
+					<table class="eve_alarm_table">
+						<colgroup>
+							<col style="width:60px"/>
+							<col style="width:75px" />
+							<col style="width:35px" />
+							<col style="width:50px" />
+							<col style="width:80px" />
+							<col style="width:35px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>시설물 명</th>
+								<th>이벤트 명</th>
+								<th>등급</th>
+								<th>발생 위치</th>
+								<th>발생일시</th>
+								<th>상태</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="table_box">
+						<table class="eve_alarm_table">
+							<colgroup>
+								<col style="width:60px"/>
+								<col style="width:75px" />
+								<col style="width:35px" />
+								<col style="width:50px" />
+								<col style="width:80px" />
+								<col style="width:35px" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="user">
+					<span class="user_id">KT admin</span>
+					<a class="user_state">Logout</a>
+				</div>
+			</div>
+		</header>
+		<section id="container">
+			<div class="menu">
+				<span class="menu_tit">Dashboard</span>
+				<div id="gnb">
+					<ul>
+						<li class="stats_mor">
+							<a href="../statistics/index.html">통계 모니터링</a>
+						</li>
+						<li class="rt_mor">
+							<a href="../realtime/index.html">실시간 모니터링</a>
+						</li>
+						<li class="fa_info active">
+							<a href="#">시설물 정보</a>
+						</li>
+						<li class="eve_info">
+							<a href="../event/index.html">이벤트 정보</a>
+						</li>
+						<li class="chk_info">
+							<a href="../check/index.html">점검 정보</a>
+						</li>
+						<li class="sms_info">
+							<a href="../sms/index.html">SMS 정보</a>
+						</li>
+						<li class="voc_info">
+							<a href="../voc/index.html">VOC 정보</a>
+						</li>
+						<li class="noti">
+							<a href="../notice/index.html">공지사항</a>
+						</li>
+						<li class="menual last_list">
+							<a href="#">매뉴얼</a>
+						</li>
+					</ul>
+				</div>
+				<button class="show_hide_arrow"></button>
+			</div>
+			<div class="content_wrap">
+				<div class="side_wrap">
+					<div class="map_wrap">
+						<div class="map_header">
+							<p class="map_location">경상북도 > 포항시 > 남구 > 해도동</p>
+							<button class="btn_show_list"></button>
+						</div>
+						<div class="map">
+							<div class="legend">
+								<ul>
+									<li class="icon_bridge">교량</li>
+									<li class="icon_parking">주차장</li>
+									<li class="icon_tunnel">터널</li>
+									<li class="icon_cons">공사장</li>
+									<li class="icon_school">학교</li>
+								</ul>
+							</div>
+							<div class="cctv_table_box">
+								<span class="con_tit">CCTV 리스트</span>
+								<table class="cctv_table">
+									<colgroup>
+										<col style="width:224px"/>
+										<col style="width:150px"/>
+										<col style="width:120px"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>시설물 명</th>
+											<th>유형</th>
+											<th>설치 수</th>
+										</tr>
+									</thead>
+								</table>
+								<div class="table_box mCustomScrollbar">
+									<table class="cctv_table">
+										<colgroup>
+											<col style="width:224px"/>
+											<col style="width:150px"/>
+											<col style="width:120px"/>
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr><tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr><tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+											<tr>
+												<td>태화대교</td>
+												<td>교량</td>
+												<td>6대</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fa_info_wrap">
+						<span class="con_tit">시설물 정보</span>
+						<div class="fa_img_box">
+							<img src="" alt="facility image"> <!-- 추후 이미지 추가 -->
+							<ul>
+								<li><button class="btn_plan btn_disable" data-toggle="modal" data-target="#detail_modal">상세보기</button></li>
+								<li><button class="btn_cctv" data-toggle="modal" data-target="#cctv_modal">cctv</button></li>
+							</ul>
+						</div>
+						<div class="fa_info_data">
+							<span class="fa_nm">강유철교</span>
+							<p class="fa_ad">경북 포항시 남구 연일읍 중명리 1123</p>
+							<dl class="fa_info_list">
+								<dt>시설물 유형</dt>
+								<dd>교량</dd>
+								<dt>위치</dt>
+								<dd>포항시 남구</dd>
+								<dt>시설 상태</dt>
+								<dd class="color_good">양호</dd>
+								<dt>등록일</dt>
+								<dd>2012/09/23</dd>
+								<dt>점검 여부</dt>
+								<dd>점검 필요</dd>
+								<dt>최근 점검일</dt>
+								<dd>2018/06/20</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="data_wrap">
+					<ul class="tab">
+						<li><a href="#realtime" class="active">실시간 데이터</a></li>
+						<li><a href="#measuring">계측 데이터</a></li>
+						<li><a href="#loca_info">도면 및 센서 위치</a></li>
+						<li><a href="#event_history">이벤트 이력</a></li>
+						<li><a href="#check_info">점검 정보</a></li>
+					</ul>
+					<div class="cons">
+						<div id="realtime" class="tab_con">
+							<div class="tab_con_hd">
+								<p class="fa_name">
+									<strong>강유철교</strong>
+									<span>(Gang Yoo railroad bridge)</span>
+								</p>
+								<div class="select_wrap">
+									<select>
+										<option value="구역별">구역별</option>
+										<option value="구역별">구역별</option>
+										<option value="구역별">구역별</option>
+										<option value="구역별">구역별</option>
+									</select>
+									<select>
+										<option value="센서종류">센서종류</option>
+										<option value="광센서">광센서</option>
+										<option value="무선센서">무선센서</option>
+									</select>
+								</div>
+							</div>
+							<div class="graph_list_wrap">
+								<ul class="graph_list">
+									<li>
+										<div class="graph_hd">
+											<span class="graph_tit">A-03 광센서</span>
+											<span class="graph_sub_tit">(AMG_T1)</span>
+										</div>
+										<div class="graph"></div>
+									</li>
+									<li>
+										<div class="graph_hd">
+											<span class="graph_tit">A-03 광센서</span>
+											<span class="graph_sub_tit">(AMG_T2)</span>
+										</div>
+										<div class="graph"></div>
+									</li>
+									<li>
+										<div class="graph_hd">
+											<span class="graph_tit">A-03 광센서</span>
+											<span class="graph_sub_tit">(AMG_T3)</span>
+										</div>
+										<div class="graph"></div>
+									</li>
+									<li>
+										<div class="graph_hd">
+											<span class="graph_tit">A-03 광센서</span>
+											<span class="graph_sub_tit">(V-Rok)</span>
+										</div>
+										<div class="graph"></div>
+									</li>
+									<li class="mgb0">
+										<div class="graph_hd">
+											<span class="graph_tit">A-03 무선센서</span>
+											<span class="graph_sub_tit">(GT-Cross1)</span>
+										</div>
+										<div class="graph"></div>
+									</li>
+									<li class="mgb0">
+										<div class="graph_hd">
+											<span class="graph_tit">A-03 무선센서</span>
+											<span class="graph_sub_tit">GT-Cross2</span>
+										</div>
+										<div class="graph"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="paging_wrap">
+								<span class="ss_num">총 센서 수 <strong>8</strong></span>
+								<div class="paging">
+									<ul>
+										<li><a href="#"><img src="img/paging_first_arrow.png" alt="이전글이 존재하지 않습니다."></a></li>
+										<li><a href="#"><img src="img/paging_left_arrow.png" alt="이전글이 존재하지 않습니다."></a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#"><img src="img/paging_right_arrow.png" alt="다음글이 존재하지 않습니다."></a></li>
+										<li><a href="#"><img src="img/paging_last_arrow.png" alt="다음글이 존재하지 않습니다."></a></li>
+									</ul>
+								</div>
+							</div>
+						</div> <!-- Tab1. 실시간 데이터 -->
+						<div id="measuring" class="tab_con">
+							<div class="con_wrap">
+								<div class="tab_con_hd">
+									<p class="fa_name">
+										<strong>강유철교</strong>
+										<span>(Gang Yoo railroad bridge)</span>
+									</p>
+								</div>
+								<div class="search_box">
+									<div class="search_ss">
+										<div class="ss_type">
+											<span class="sch_tit">센서 구분:</span>
+											<select>
+												<option value="광센서">광센서</option>
+												<option value="무선센서">무선센서</option>
+											</select>
+										</div>
+										<div class="ss_type">
+											<span class="sch_tit">센서 종류:</span>
+											<select>
+												<option value="가속도계">가속도계</option>
+												<option value="가속도계">가속도계</option>
+											</select>
+										</div>
+									</div>
+									<button class="btn_view">조회</button>
+									<!-- <div class="search_etc">
+										<div class="dura">
+											<span class="sch_tit">기간:</span>
+											<div class="calendar">
+												<label for="from" class="label_from">From</label>
+												<input type="text" class="from" name="from">
+												<span class="calendar_icon"></span>
+												<label for="to">~</label>
+												<input type="text" class="to" name="to">
+												<span class="calendar_icon"></span>
+											</div>
+										</div>
+										<div class="btns">
+											<ul class="select_period">
+												<li class="active"><button>일간</button></li>
+												<li><button>주간</button></li>
+												<li><button>월간</button></li>
+											</ul>
+											<button class="btn_check">조회</button>
+										</div>
+									</div> -->
+								</div>
+								<!-- <div class="chk_box chk_style">
+									<label for="chk1">최대
+										<input type="checkbox" id="chk1" name="chk" />
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk2">최소
+										<input type="checkbox" id="chk2" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk3">평균
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk4">표준편차
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk5">관리 기준사(주의)
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk6" class="pdr0">관리 기준사(경고)
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk7" class="pd">10분 통계
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk8" class="pd">보수보강시점
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk9" class="pd">패턴분석
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+									<label for="chk10" class="pdr0">상관관계 분석
+										<input type="checkbox" id="chk3" name="chk"/>
+										<span class="checkmark"></span>
+									</label>
+								</div> -->
+								<div class="table_wrap">
+									<table class="m_data_table">
+										<colgroup>
+											<col style="width:112px"/>
+											<col style="width:180px"/>
+											<col style="width:360px"/>
+											<col style="width:204px"/>
+											<col style="width:180px"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th></th>
+												<th>구분</th>
+												<th>센서 ID</th>
+												<th>센서 종류</th>
+												<th>상태</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="table_box mCustomScrollbar">
+										<table class="m_data_table">
+											<colgroup>
+												<col style="width:112px"/>
+												<col style="width:180px"/>
+												<col style="width:360px"/>
+												<col style="width:204px"/>
+												<col style="width:180px"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td class="chk_style">
+														<label for="chk1">
+															<input type="checkbox" id="chk1" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk2">
+															<input type="checkbox" id="chk2" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk3">
+															<input type="checkbox" id="chk3" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk4">
+															<input type="checkbox" id="chk4" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr><tr>
+													<td class="chk_style">
+														<label for="chk5">
+															<input type="checkbox" id="chk5" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk6">
+															<input type="checkbox" id="chk6" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk7">
+															<input type="checkbox" id="chk7" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk8">
+															<input type="checkbox" id="chk8" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk9">
+															<input type="checkbox" id="chk9" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td class="chk_style">
+														<label for="chk10">
+															<input type="checkbox" id="chk10" name="chk"/>
+															<span class="checkmark"></span>
+														</label>
+													</td>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="search_box chart">
+									<div class="search_etc">
+										<span class="sch_tit">기간:</span>
+										<div class="dura_wrap">
+											<div class="dura">
+												<div class="calendar">
+													<label for="from" class="label_from">From</label>
+													<input type="text" class="from" name="from" id="from">
+													<span class="calendar_icon"></span>
+													<label for="to">~</label>
+													<input type="text" class="to" name="to" id="to">
+													<span class="calendar_icon"></span>
+												</div>
+											</div>
+											<div class="btns">
+												<ul class="select_period">
+													<li class="active"><button>일간</button></li>
+													<li><button>주간</button></li>
+													<li><button>월간</button></li>
+													<li><button>10분</button></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="graph_filter chk_style">
+										<span class="sch_tit">그래프 필터:</span>
+										<ul>
+											<li>
+												<label for="chk01">최대
+													<input type="checkbox" id="chk01" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk02">최소
+													<input type="checkbox" id="chk02" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk03">평균
+													<input type="checkbox" id="chk03" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk04" class="pdr0">표준편차
+													<input type="checkbox" id="chk04" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk05">상관관계
+													<input type="checkbox" id="chk05" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk06">XX최대
+													<input type="checkbox" id="chk06" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk07">XX최소
+													<input type="checkbox" id="chk07" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label for="chk08" class="pdr0">관리 기준치
+													<input type="checkbox" id="chk08" name="chk" />
+													<span class="checkmark"></span>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<button class="btn_chart">차트 적용</button>
+								</div>
+								<div class="graph" id="stats_graph"></div>
+							</div>
+						</div> <!-- Tab2. 계측 데이터 -->
+						<div id="loca_info" class="tab_con">
+							
+							<div class="con_left">
+								<div class="tab_con_hd">
+									<p class="fa_name">
+										<strong>센서정보</strong>
+									</p>
+									<div class="select_wrap">
+										<select>
+											<option value="센서유형">센서유형</option>
+											<option value="광센서">광센서</option>
+											<option value="무선센서">무선센서</option>
+										</select>
+									</div>
+								</div>
+								<div class="search_box">
+									<div class="search_ss">
+										<div class="ss_type">
+											<span class="sch_tit">센서 구분:</span>
+											<select>
+												<option value="광센서">광센서</option>
+												<option value="무선센서">무선센서</option>
+											</select>
+										</div>
+										<div class="ss_kind mgr0">
+											<span class="sch_tit">센서 종류:</span>
+											<select>
+												<option value="가속도계">가속도계</option>
+												<option value="균열계">균열계</option>
+											</select>
+										</div>
+										<div class="ss_sta">
+											<span class="sch_tit">센서 상태:</span>
+											<select>
+												<option value="정상">정상</option>
+												<option value="오류">오류</option>
+											</select>
+										</div>
+									</div>
+									<button class="btn_check">조회</button>
+									<!-- <div class="search_etc">
+										<div class="dura">
+											<span class="sch_tit">기간:</span>
+											<div class="calendar">
+												<label for="from" class="label_from">From</label>
+												<input type="text" class="from" name="from">
+												<span class="calendar_icon"></span>
+												<label for="to">~</label>
+												<input type="text" class="to" name="to">
+												<span class="calendar_icon"></span>
+											</div>
+										</div>
+										<button class="btn_check">조회</button>
+									</div> -->
+								</div>
+								<div class="table_wrap">
+									<table class="sensor_table">
+										<colgroup>
+											<col style="width:121px"/>
+											<col style="width:151px"/>
+											<col style="width:121px"/>
+											<col style="width:91px"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>센서 ID</th>
+												<th>센서 종류</th>
+												<th>상태</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="table_box mCustomScrollbar">
+										<table class="sensor_table">
+											<colgroup>
+												<col style="width:121px"/>
+												<col style="width:151px"/>
+												<col style="width:121px"/>
+												<col style="width:91px"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr><tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+												<tr>
+													<td>광센서</td>
+													<td>BTC_W2</td>
+													<td>균열계</td>
+													<td>정상</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div> <!-- con_left -->
+							<div class="con_right">
+								<ul class="tab_chart">
+									<li><a href="#mea_data" class="active">계측데이터</a></li>
+									<li><a href="#stable_state">안정상태 예측</a></li>
+								</ul>
+								<div class="cons">
+									<div id="mea_data" class="con_tab_chart">
+										<div class="search_box">
+											<div class="search_ss">
+												<div class="">
+													<div class="dura">
+														<span class="sch_tit">기간:</span>
+														<div class="calendar">
+															<label class="label_from">From</label>
+															<input type="text" class="from" name="from">
+															<span class="calendar_icon"></span>
+														</div>
+													</div>
+													<select>
+														<option value="14">14</option>
+														<option value="15">15</option>
+													</select>
+													<span class="txt">시</span>
+													<select>
+														<option value="04">04</option>
+														<option value="05">05</option>
+													</select>
+													<span class="txt">분</span>
+													<span class="txt range">~</span>
+													<select>
+														<option value="04">04</option>
+														<option value="05">05</option>
+													</select>
+													<span class="txt">분</span>
+												</div>
+											</div>
+											<button>조회</button>
+										</div>
+										<div class="graph_box">
+											<div class="graph_hd">
+												<span class="graph_tit">센서 정보</span>
+												<span class="graph_sub_tit">(S003000001)</span>
+											</div>
+											<div class="graph_con">
+												<div class="graph" id="m_data_graph"></div>
+											</div>
+										</div>
+									</div>
+									<div id="stable_state" class="con_tab_chart">
+										<div class="graph_box">
+											<div class="graph_hd">
+												<span class="graph_tit">센서 정보2</span>
+												<span class="graph_sub_tit">(S003000001)</span>
+											</div>
+											<div class="graph_con">
+												<div class="graph" id="stable_state_graph"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> <!-- con_right -->
+						</div> <!-- Tab3. 도면 및 센서 위치 -->
+						<div id="event_history" class="tab_con">
+							<div class="tab_con_hd">
+								<p class="fa_name">
+									<strong>강유철교</strong>
+									<span>(Gang Yoo railroad bridge)</span>
+								</p>
+							</div>
+							<div class="con_left">
+								<div class="search_box">
+									<div class="search_ss">
+										<div class="eve_grade">
+											<span class="sch_tit">이벤트 등급:</span>
+											<select>
+												<option value="경계">경계</option>
+												<option value="주의">주의</option>
+											</select>
+										</div>
+										<div class="ss_type">
+											<span class="sch_tit">센서 종류:</span>
+											<select>
+												<option value="가속도계">가속도계</option>
+												<option value="균열계">균열계</option>
+											</select>
+										</div>
+									</div>
+									<div class="search_etc">
+										<div class="dura">
+											<span class="sch_tit">기간:</span>
+											<div class="calendar">
+												<label class="label_from">From</label>
+												<input type="text" class="from" name="from">
+												<span class="calendar_icon"></span>
+												<label>~</label>
+												<input type="text" class="to" name="to">
+												<span class="calendar_icon"></span>
+											</div>
+										</div>
+										<div class="btns">
+											<ul class="select_period">
+												<li class="active"><button>일간</button></li>
+												<li><button>주간</button></li>
+												<li><button>월간</button></li>
+											</ul>
+											<button class="btn_check">조회</button>
+										</div>
+									</div>
+								</div>
+								<div class="table_wrap">
+									<table class="eve_history_table">
+										<colgroup>
+											<col style="width:100px"/>
+											<col style="width:50px"/>
+											<col style="width:50px"/>
+											<col style="width:128px"/>
+											<col style="width:94px"/>
+											<col style="width:62px"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>이벤트 명</th>
+												<th>등급</th>
+												<th>지역</th>
+												<th>센서 종류</th>
+												<th>발생 일시</th>
+												<th>상태</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="table_box mCustomScrollbar">
+										<table class="eve_history_table">
+											<colgroup>
+												<col style="width:100px"/>
+												<col style="width:50px"/>
+												<col style="width:50px"/>
+												<col style="width:128px"/>
+												<col style="width:94px"/>
+												<col style="width:62px"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr class="active">
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr><tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>경계</td>
+													<td>동구</td>
+													<td>광1측 가속도센서</td>
+													<td>2018/09/05</td>
+													<td>종료</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div> <!-- con_left -->
+							<div class="con_right">
+								<div class="plans_box">
+									<div class="plans_hd">
+										<span class="plans_tit">이벤트 발생 위치</span>
+									</div>
+									<div class="plans_con">
+										<ul>
+											<li>
+												<div class="plans_type">
+													<span>정면</span>
+												</div>
+												<div class="plans_img">
+													<!-- <img src="" alt=""> -->
+												</div>
+											</li>
+											<li>
+												<div class="plans_type">
+													<span>측면_1</span>
+												</div>
+												<div class="plans_img">
+													<!-- <img src="" alt=""> -->
+												</div>
+											</li>
+											<li>
+												<div class="plans_type">
+													<span>측면_2</span>
+												</div>
+												<div class="plans_img">
+													<!-- <img src="" alt=""> -->
+												</div>
+											</li>
+											<li>
+												<div class="plans_type">
+													<span>후면</span>
+												</div>
+												<div class="plans_img">
+													<!-- <img src="" alt=""> -->
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="graph_box">
+									<div class="graph_hd">
+										<span class="graph_tit">이벤트 전/후 계측 데이터</span>
+										<span class="graph_sub_tit">(광1축 가속도센서)</span>
+									</div>
+									<div class="graph"></div>
+								</div>
+							</div> <!-- con_right -->
+						</div> <!-- Tab4. 이벤트 이력 -->
+						<div id="check_info" class="tab_con">
+							<div class="tab_con_hd">
+								<p class="fa_name">
+									<strong>강유철교</strong>
+									<span>(Gang Yoo railroad bridge)</span>
+								</p>
+							</div>
+							<div class="con_left">
+								<div class="search_box">
+									<div class="search_ss">
+										<div class="ss_type">
+											<span class="sch_tit">센서 구분:</span>
+											<select>
+												<option value="광센서">광센서</option>
+												<option value="무선센서">무선센서</option>
+											</select>
+										</div>
+										<div class="ss_kind">
+											<span class="sch_tit">센서 종류:</span>
+											<select>
+												<option value="가속도계">가속도계</option>
+												<option value="균열계">균열계</option>
+											</select>
+										</div>
+										<div class="ss_sta mgr0">
+											<span class="sch_tit">센서 상태:</span>
+											<select>
+												<option value="정상">정상</option>
+												<option value="오류">오류</option>
+											</select>
+										</div>
+									</div>
+									<div class="search_etc">
+										<div class="dura">
+											<span class="sch_tit">등록일:</span>
+											<div class="calendar">
+												<label class="label_from">From</label>
+												<input type="text" class="from" name="from">
+												<span class="calendar_icon"></span>
+												<label>~</label>
+												<input type="text" class="to" name="to">
+												<span class="calendar_icon"></span>
+											</div>
+										</div>
+										<button class="btn_check">조회</button>
+									</div>
+								</div>
+								<div class="table_wrap">
+									<table class="chk_table">
+										<colgroup>
+											<col style="width:100px"/>
+											<col style="width:65px"/>
+											<col style="width:65px"/>
+											<col style="width:66px"/>
+											<col style="width:94px"/>
+											<col style="width:94px"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>점검 유형</th>
+												<th>점검 상태</th>
+												<th>점검 구간</th>
+												<th>점검자</th>
+												<th>발생 일시</th>
+												<th>등록 일시</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="table_box mCustomScrollbar">
+										<table class="chk_table">
+											<colgroup>
+												<col style="width:100px"/>
+												<col style="width:65px"/>
+												<col style="width:65px"/>
+												<col style="width:66px"/>
+												<col style="width:94px"/>
+												<col style="width:94px"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr class="active">
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr><tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr><tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr><tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+												<tr>
+													<td>가속도 임계</td>
+													<td>양호</td>
+													<td>A-02</td>
+													<td>서명환</td>
+													<td>2018/09/05</td>
+													<td>2018/09/05</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div> <!-- con_left -->
+							<div class="con_right">
+								
+							</div> <!-- con_right -->
+						</div> <!-- Tab5. 점검 정보 -->
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="cctv_modal">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title">CCTV</h5>
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+			      		</div>
+			      		<div class="modal-body">
+							<p class="cctv_tit_wrap">
+								<span class="cctv_tit">CCTV_1번</span>
+								<span class="cctv_sub_tit">강유철교</span>
+							</p>
+							<div class="main_img">
+								<!-- <img src="" alt=""> -->
+							</div>
+							<ul class="sub_img_box">
+								<li>
+									<!-- <img src="" alt=""> -->
+									<div class="sub_img_info">
+										<span class="sub_img_tit">CCTV_2번</span>
+									</div>
+								</li>
+								<li>
+									<!-- <img src="" alt=""> -->
+									<div class="sub_img_info">
+										<span class="sub_img_tit">CCTV_2번</span>
+									</div>
+								</li>
+								<li>
+									<!-- <img src="" alt=""> -->
+									<div class="sub_img_info">
+										<span class="sub_img_tit">CCTV_2번</span>
+									</div>
+								</li>
+							</ul>
+			      		</div>
+			    	</div>
+			 	</div>
+			</div> <!-- cctv Modal -->
+			<div class="modal fade" id="detail_modal">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title">상세보기</h5>
+			        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+			      		</div>
+			      		<div class="modal-body">
+							<p class="cctv_tit_wrap">
+								<span class="detail_tit">강유철교</span>
+								<span class="detail_sub_tit">교량</span>
+							</p>
+							<table class="detail_table">
+								<colgroup>
+									<col style="width:120px" />
+									<col style="width:398px" />
+									<col style="width:120px" />
+									<col style="width:398px" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>준공 일자</th>
+										<td>2016-05-12</td>
+										<th>담당자</th>
+										<td>교량 관리부 &nbsp;|&nbsp; 010-1234-1244</td>
+									</tr>
+									<tr>
+										<th>시설 위치</th>
+										<td>경북 포항시 북구 흥해읍 흥해로 308</td>
+										<th>시설 상태</th>
+										<td class="grade_b">B 등급 (양호)</td> <!-- 5가지 등급에 따른 텍스트 컬러 변경 -->
+									</tr>
+									<tr class="fa_data">
+										<th>시설 제원</th>
+										<td colspan="3"><div class="td_scroll">건축 면적: 5,463.47m</div></td>
+									</tr>
+									<tr>
+										<th>점검 시작일</th>
+										<td>2018-04-12</td>
+										<th>점검 종료일</th>
+										<td>2018-04-13</td>
+									</tr>
+									<tr>
+										<th>점검 여부</th>
+										<td>점검 필요</td>
+										<th>점검 주기</th>
+										<td>이전 점검일 기준 120일 후 </td>
+									</tr>
+									<tr>
+										<th>총 설치 센서 수</th>
+										<td>12 EA</td>
+										<th>고장 센서 수</th>
+										<td>2 EA</td>
+									</tr>
+									<tr>
+										<th>센서 종류</th>
+										<td colspan="3">가속도계 3 EA / 변형률계 8 EA / 균열계 1 EA</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="plans_table">
+								<colgroup>
+									<col style="width:120px" />
+									<col style="width:916px" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>도면</th>
+										<td>
+											<div class="td_con_wrap">
+												<span>Top view</span>
+												<div class="plans_img_box">
+													<button class="left_arrow"></button>
+													<!-- <img src="" alt=""> -->
+													<button class="right_arrow"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+			      		</div>
+			    	</div>
+			 	</div>
+			</div> <!-- 상세보기 Modal -->
+		</section>
+		<footer id="footer" class="marquee">
+			<p>[KBS2] 포항시 남구 연일읍 연일대교, 섬안큰다리 등 지진으로 피해 심각 지역 주민 피난 경보 발령</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+			<p>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피해 촉발</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+		</footer>
+	</div>
+</body>
+</html>

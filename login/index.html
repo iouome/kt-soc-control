@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="KT" />
+	<meta name="description" content="KT" />
+	<title>GiGA Safe SOC</title>
+	<link rel="stylesheet" href="../common/css/common.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.css" type="text/css">
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<script src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+	<div id="wrap" class="login">
+		<section id="container">
+			<h1 class="login_lg"><img src="./img/00_login_logo.png" alt="Kt GIGA Safe SOC 로고 이미지"/></h1>
+        	<h2 class="login_lg_sub">KT 시설물안전관리 대시보드</h2>
+        	<div class="login_box">
+	          <div class="box_inner_header">
+	              <span>로그인</span>
+	              <p>환영합니다. <br/>서비스를 사용하려면 로그인을 해주시기 바랍니다.</p>
+	          </div>
+	          <div class="box_inner_con">            
+	            <dl>
+	              <dt>
+	                <label for="id">아이디</label>
+	              </dt>
+	              <dd>
+	                <input type="text" name="id" id="id" placeholder="ID를 입력해 주세요."/>                   
+	                <strong class="error">&#x203B; 잘못된 아이디입니다. 확인 후 다시 입력해 주세요.</strong>
+	              </dd>
+	            </dl>
+	            <dl>
+	              <dt>
+	                <label for="pw">비밀번호</label>
+	              </dt>
+	              <dd>
+	                <input type="password" name="pw" id="pw" placeholder = "Password를 입력해 주세요."/>
+	                <strong class="error">&#x203B; 잘못된 비밀번호입니다. 확인 후 다시 입력해 주세요.</strong>
+	              </dd>
+	            </dl>
+	            <!-- dl>
+	              <dt>
+	                <label htmlFor="security">보안 문자</label>
+	              </dt>
+	              <dd>
+	                <input type="text" name="security" id="security" placeholder="아래 이미지의 보안 문자를 입력해 주세요."/>
+	                <p>Y9J2H5</p>
+	                <strong class="error">&#x203B; 올바른 문자가 아닙니다. 확인 후 다시 입력해 주세요.</strong>        
+	              </dd>
+	            </dl> -->
+	            <p class="membership">
+	              회원이 아니시라면 가입 후 이용가능합니다.
+	              <strong><button data-toggle="modal" data-target="#join_modal">회원가입</button></strong>
+	            </p>
+	            <div class="auth_code">
+	            	<p>인증번호가 전송되었습니다.</p>
+	            	<dl>
+	            		<dt>
+	            			<label>인증번호 입력</label>
+	            		</dt>
+	            		<dd>
+	            			<div class="input-group">
+	            				<input type="text" class="form-control">
+	            				<div class="input-group-append">
+	            					<span class="input-group-text">00:00</span>
+	            				</div>
+	            			</div>
+	            		</dd>
+	            	</dl>
+	            	<p class="info">※ 3분 이내애 인증번호(6자리)를 입력해 주세요.</p>
+	            	<p class="info">※ 입력시간 초과시 "인증번호 재발송" 버튼을 눌러주세요.</p>
+	            </div>            
+	          </div>
+	          <div class="box_inner_footer">
+	              <!-- <a>로그인</a> -->
+	              <div class="btn_box">
+	                  <button class="btn_re">인증번호 재발송</button>
+	                  <button class="btn_confirm">확인</button>
+                </div>
+	          </div>
+	        </div>
+	        <div class="modal fade" id="join_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">회원가입</h5>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+				        <dl>
+			              <dt>
+			              	<span class="astro">&#42;</span>
+			                <label for="join_id">아이디</label>
+			              </dt>
+			              <dd>
+			                <div class="input-group id_group">
+			                	<input type="text" name="id" id="join_id" placeholder="ID를 입력해 주세요."/>
+			                	<div class="input-group-append">
+								    <button class="btn btn-outline-secondary" type="button">중복확인</button>
+								</div>
+			                </div>
+
+			                <strong class="error">&#x203B; 잘못된 아이디입니다. 확인 후 다시 입력해 주세요.</strong>
+			              </dd>
+			            </dl>
+			            <dl>
+			              <dt>
+			              	<span class="astro">&#42;</span>
+			                <label for="join_pw">비밀번호</label>
+			              </dt>
+			              <dd>
+			                <input type="password" name="pw" id="join_pw" placeholder="영문 숫자 포함 10~18자 이내로 등록 가능합니다."/>
+			                <strong class="error">&#x203B; 잘못된 비밀번호입니다. 확인 후 다시 입력해 주세요.</strong>
+			              </dd>
+			            </dl>
+			            <dl>
+			              <dt>
+			              	<span class="astro">&#42;</span>
+			                <label for="join_re_pw">비밀번호 확인</label>
+			              </dt>
+			              <dd>
+			                <input type="password" name="pw" id="join_re_pw" placeholder="영문 숫자 포함 10~18자 이내로 등록 가능합니다."/>
+			                <strong class="error">&#x203B; 잘못된 비밀번호입니다. 확인 후 다시 입력해 주세요.</strong>
+			              </dd>
+			            </dl>
+			            <dl>
+			              <dt>
+			              	<span class="astro">&#42;</span>
+			                <label for="join_name">이름</label>
+			              </dt>
+			              <dd>
+			                <input type="text" name="name" id="join_name" placeholder="이름을 입력해주시기 바랍니다."/>
+			                <strong class="error">&#x203B; 잘못된 이름입니다. 확인 후 다시 입력해 주세요.</strong>
+			              </dd>
+			            </dl>
+						<dl class="tel">
+			              <dt>
+			                <label for="join_tel">휴대폰 번호</label>
+			              </dt>
+			              <dd>
+			                <select name="tel" id="join_tel">
+			                	<option>010</option>
+			                	<option>010</option>
+			                </select>
+			                <span class="at">-</span>
+			                <input type="text" name="tel">
+			                <span class="at">-</span>
+			                <input type="text" name="tel">
+			              </dd>
+			            </dl>
+			            <dl class="email">
+			              <dt>
+			                <label>E-Mail</label>
+			              </dt>
+			              <dd>
+			                <input type="text" name="email">
+			                <span class="at">@</span>
+			                <input type="text" name="email">
+			                <select name="email" id="email">
+			                	<option>직접 입력</option>
+			                	<option>naver.com</option>
+			                </select>
+			              </dd>
+			            </dl>
+			            <dl class="group">
+			              <dt>
+			                <label for="join_orga">조직</label>
+			              </dt>
+			              <dd>
+			                <select name="email" id="join_orga">
+			                	<option>선택</option>
+			                	<option>선택</option>
+			                	<option>선택</option>
+			                </select>
+			              </dd>
+			              <dt>
+			                <label for="join_rank">직급</label>
+			              </dt>
+			              <dd>
+			                <select name="rank" id="join_rank">
+			                	<option>선택</option>
+			                	<option>관리자</option>
+			                	<option>실무자</option>
+			                </select>
+			              </dd>
+			            </dl>
+				    </form>
+				    <p class="caution">(*)표시의 항목은 필수 입력 사항입니다.</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn_join">회원가입</button>
+			        <button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<div class="modal fade pop_style" id="login_fail_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">로그인을 실패하였습니다.<br/><strong>아이디 또는 비밀번호</strong>를 다시<br/>확인 후 로그인해주십시오.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 로그인 실패 팝업 -->
+			<div class="modal fade pop_style" id="certi_code_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">인증을 실패하였습니다.<br/><strong>인증 번호</strong>를 다시 확인하여<br/>주십시오.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 인증 실패 (인증번호 재입력) 팝업 -->
+			<div class="modal fade pop_style" id="certi_fail_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">인증을 실패하였습니다.<br/>로그인을 다시 시도하여<br/>주십시오.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 인증 실패 팝업 -->
+			<div class="modal fade pop_style" id="logout_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">정말 <strong>로그아웃</strong>을<br/>진행하시겠습니까?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 로그아웃 확인 팝업 -->
+			<div class="modal fade pop_style" id="logout_com_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">정상적으로 <strong>로그아웃</strong>이<br/>완료되었습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 로그아웃 완료 팝업 -->
+			<div class="modal fade pop_style" id="accout_com_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">새로운 계정 등록을<br/><strong>완료</strong>하였습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 계정등록 완료 팝업 -->
+			<div class="modal fade pop_style" id="accout_fail_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">새로운 계정 등록을<br/><strong>실패</strong>하였습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_confirm" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 계정등록 실패 팝업 -->
+		</section>
+	</div>
+</body>
+</html>

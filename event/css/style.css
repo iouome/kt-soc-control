@@ -1,0 +1,743 @@
+/* ---- 컨텐츠 영역 ----  */
+.left_side_wrap{
+	float: left;        
+	width: 546px;
+	margin-right: 14px;
+}
+.center_wrap{
+    float: left;        
+    width: 546px;
+    margin-right: 14px;
+}
+.right_side_wrap{
+    float: left;        
+    width: 546px;
+}
+.sms_history, .send_sms{
+	margin-bottom: 14px;
+}
+.event_measuring, .sms_history, .send_sms{
+    height: 294px;
+    background-color: #052237;
+    border-top: 1px solid #1b2f3f;
+    border-bottom: 1px solid #030b11;
+    box-sizing: border-box;
+}
+.event_history, .event_location{
+    height: 448px;
+    background-color: #052237;
+    margin-bottom: 14px; 
+    border-top: 1px solid #1b2f3f;
+    border-bottom : 1px solid #030b11;
+    box-sizing: border-box;
+}
+.event_location{
+    margin-bottom: 0;
+}
+.info_wrap{
+    height: 448px;
+    padding: 16px 26px;
+    background-color: #052237;
+    margin-bottom: 14px;
+    border-top: 1px solid #1b2f3f;
+    border-bottom: 1px solid #030b11;
+    box-sizing: border-box;
+}
+.event_history, .sms_history{
+    padding: 15px 0 15px 25px;
+}
+.event_location, .event_measuring, .send_sms{
+    padding: 15px 25px 13px;
+}
+
+/* ---- 공통요소 ---- */
+.con_tit{
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #87aac7;
+    letter-spacing: 1px;
+    padding-bottom: 16px;
+}
+
+table tbody tr{
+    border-bottom: 1px solid #0a3452;
+    border-style: inset;
+}
+table th{
+    height: 34px;
+    font-size: 13px;
+    line-height: 34px;
+    color: #53748f;
+    background-color: #082c45;
+    letter-spacing: 1px;
+    text-align: center;
+}
+table td{
+    font-size: 13px;
+    line-height: 13px;
+    color: #dee7ee;
+    text-align: center;
+    padding: 10px 0 9px;
+    vertical-align: middle;
+}
+
+/*  지도  */
+.map_header{
+    position: relative;
+    height: 36px;
+    background-color: rgba(255,255,255,.08);
+}
+.map_location{
+    display: inline-block;
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    line-height: 36px;
+    color: #567894;
+    padding-left: 46px;
+    background: url(../../common/img/00_title_map_icon.png) no-repeat 27px 12px;
+}
+.map{
+    position: relative;
+    /*height: 566px;*/
+    height: 412px;
+    border: 1px solid #003758;
+    box-sizing: border-box;
+}
+.map .legend{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 96px;
+    height: 158px;
+    background-color: rgba(0,0,0,.85);
+}
+.map .legend ul{
+    width: 55px;
+    height: 112px;
+    margin: 0 auto;
+    padding: 23px 0 24px;
+}
+.map .legend li{
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    color: #8fabbf;
+    padding-left: 22px;
+    margin-bottom: 8px
+}
+
+/* 이벤트 정보 / 시설물 & 센서 정보 */
+.info_wrap .hd{
+    position: relative;
+    /*height: 78px;*/
+    /*padding-bottom: 8px;*/
+    border-bottom: 1px solid #0a3452;
+}
+.info_wrap .hd:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #1272e0;
+}
+/*.info_fa .hd{
+    background: url(../img/04_event_icon_info_facility.png) no-repeat right top;
+}*/
+/*.info_event .hd{
+    background: url(../img/04_event_icon_info_event.png) no-repeat right top;
+}*/
+.info_wrap .con_tit{
+    padding-bottom: 15px;
+}
+/*.info_wrap .event_nm{
+    width: 151px;
+    height: 44px;
+    display: -webkit-box;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-family: 'NanumSquareEB';
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+}*/
+.info_event{
+    float: left;
+    width: 100%;
+}
+.info_fa{
+    float: left;
+    width: 100%;
+    margin-bottom: 26px;
+}
+.info_fa_con{
+    position: relative;
+    background: url(../img/04_event_icon_info_facility.png) no-repeat 11px 10px;
+    padding: 26px 0 18px 110px;
+    border-bottom: 1px solid #0a3452;
+}
+.info_event_con{
+    position: relative;
+    background: url(../img/04_event_icon_info_event.png) no-repeat 11px 10px;
+    padding: 26px 0 18px 110px;
+    border-bottom: 1px solid #0a3452;
+}
+.info_fa_con:after, .info_event_con:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 10px;
+    height: 1px;
+    background-color: #1272e0;
+}
+.info_fa_con .fa_txt{
+    display: inline-block;
+    position: absolute;
+    top: 91px;
+    left: 11px;
+    font-family: 'NanumSquareEB';
+    font-size: 12px;
+    line-height: 18px;
+    color: #33759e;
+    width: 78px;
+    height: 22px;
+    text-align: center;
+    border: 2px solid #0d476a;
+    box-sizing: border-box;
+}
+.info_fa_con .fa_name, .info_event_con .eve_name{
+    display: inline-block;
+    font-family: 'NanumSquareEB';
+    font-size: 19px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin-bottom: 7px;
+}
+.info_fa_con .fa_loca, .info_event_con .eve_day{
+    font-size: 13px;
+    color: #8498b8;
+    line-height: 13px;
+    margin-bottom: 19px;
+}
+.info_event_list, .info_fa_list{
+    position: relative;
+    font-family: 'NanumSquareR';
+    font-size: 13px;
+    line-height: 21px;
+    overflow: hidden;
+    /*padding: 6px 0;*/
+    /*height: 133px;*/
+    /*border-bottom: 1px solid #0a3452;*/
+}
+.info_event_list dt, .info_fa_list dt{
+    float: left;
+    width: 82px;
+    color: #87aac7;
+}
+.info_event_list dd, .info_fa_list dd{
+    color: #fff;
+    margin-left: 82px;
+    /*height: 27px;*/
+}
+.info_wrap .txt_style{
+    width: 140px;
+    height: 53px;
+    display: -webkit-box;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.info_event_list .color_point{
+    color: #d62b00;
+}
+.info_event .btn_end{
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+    width: 144px;
+    height: 26px;
+    line-height: 26px;
+    background-color: #1272e0;
+    font-family: 'NanumSquareB';
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+.info_event .btn_end:hover{
+    background-color: #065ec2;
+}
+.info_event_con .btn_on_off{
+    position: absolute;
+    top: 91px;
+    left: 26px;
+    width: 50px;
+    height: 28px;
+}
+
+/* 이벤트 및 장애 내역 */
+.event_history .table_box{
+    height: 357px;
+}
+.event_table{
+    width: 494px;
+    table-layout: fixed;
+}
+.event_table tbody tr{
+    position: relative;
+}
+.event_table tbody tr:before{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 2px;
+    height: 26px;
+    background-color: #1b82f7;
+}
+.event_table tbody .active{
+    background-color: rgba(14,88,173,.5);
+    border: 1px solid #0e58ad;
+}
+.event_table tr th:nth-child(2), .event_table tr td:nth-child(2){
+    text-align: left;
+    padding-left: 10px;
+}
+.event_table .point_bar{
+    width: 2px;
+    height: 26px;
+    float: right;
+    background-color: #1b82f7;
+}
+.event_table tr td:first-child{
+    padding: 0;
+}
+.event_table tr td:nth-child(2){
+    width: 106px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-break: break-all;
+}
+.event_table tr td:nth-child(3){
+    width: 86px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-break: break-all;
+}
+
+
+/* 이벤트 발생 위치 */
+.plans_box{
+    width: 494px;
+    height: 391px;
+    border: 1px solid #142b47;
+    box-sizing: border-box;
+}
+.plans_type{
+    width: 100%;
+    height: 30px;
+    background-color: #112742;
+    border-bottom: 1px solid #142b47;
+    box-sizing: border-box;
+    text-align: center;
+}
+.plans_type span{
+    font-size: 14px;
+    line-height: 30px;
+    color: #4c6380;
+    letter-spacing: 1px;
+}
+.event_location .plans_img{
+    padding: 10px 7px 11px;
+}
+.event_location .plans_img > img{
+    float: left;
+    display: block;
+    width: 430px;
+    height: 340px;
+}
+.event_location .plans_img button{
+    display: inline-block;
+    width: 24px;
+    height: 100px;
+    margin-top: 120px;
+}
+.plans_img .left_arrow{
+    float: left;
+    background: url(../img/04_event_button_arrow_left_normal.png) no-repeat;
+}
+.plans_img .right_arrow{
+    float: right;
+    background: url(../img/04_event_button_arrow_right_normal.png) no-repeat;
+}
+
+/* 이벤트 발전 전후 계측 데이터 */
+.event_measuring .graph{
+    height: 234px;
+}
+.graph .highcharts-point {
+    fill: #26cfde;
+}
+.highcharts-grid-line{
+    stroke: #072b45;
+}
+.highcharts-axis-line{
+    stroke: #072b45;
+    stroke-width: 2;
+}
+.highcharts-axis-labels{
+    color: #315b7d;
+}
+.highcharts-tick{
+    display: none;
+}
+
+/* SMS 전송 내역 */
+.sms_table tr th:last-child, .sms_table tr td:last-child{
+    text-align: left;
+    padding-left: 12px;
+}
+.sms_history .table_box{
+    height: 203px;
+}
+.sms_who{
+    float: left;
+    width: 240px;
+    margin-right: 16px;
+}
+.sms_content{
+    float: left;
+    width: 240px;
+}
+
+/* 발송 대상 & 내용 */
+.send_sms_con{
+    padding-bottom: 9px;
+    border-bottom: 1px solid #0a3452;
+    overflow: hidden;
+}
+.send_sms .con_tit{
+    padding-bottom: 6px;
+}
+.sms_who .jstree_box{
+    height: 200px;
+    padding: 13px 0 9px 19px;
+    border-top: 2px solid #0a3452 ;
+    border-bottom: 2px solid #0a3452 ;
+    box-sizing: border-box;
+}
+.sms_content textarea{
+    float: left;
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    line-height: 20px;
+    color: #d4dbe4;
+    letter-spacing: 0.5px;
+    width: 240px;
+    height: 200px;
+    background-color: #041e30; 
+    padding: 22px 28px;
+    border: 1px solid #0a3452 ;
+    box-sizing: border-box;
+    resize: none;
+    overflow-x: hidden;
+}
+.sms_content textarea:focus{
+    border-color: #2c64a8;
+}
+.send_sms_footer{
+    float: right;
+    margin-top: 8px;
+}
+.send_sms_footer button{
+    width: 84px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #d3e5f5;
+    text-align: center;
+    border-radius: 2px;
+}
+.btn_send{
+    background-color: #1272e0;
+    margin-right: 8px;
+}
+.btn_send:hover{
+    background-color: #065ec2;
+}
+.btn_close{
+    background-color: #3d5570;
+}
+.btn_close:hover{
+    background-color: #2f4761;
+}
+.jstree_box .mCSB_scrollTools, .graph_list .mCSB_scrollTools{
+    width: 26px;
+}
+.jstree_box .mCSB_scrollTools .mCSB_draggerContainer{
+    top: -12px;
+    right: -16px;
+}
+.jstree_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .graph_list .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 7px;
+    border-radius: 2px;
+    background-color: #47637a;
+}
+.jstree_box .mCSB_scrollTools .mCSB_draggerRail, .graph_list .mCSB_scrollTools .mCSB_draggerRail{
+    background-color: #183954;
+}
+
+/* 팝업  */
+#handling_modal .modal-dialog{
+    max-width:1040px;
+    margin: 185px auto 0;    
+}
+#handling_modal .modal-content{
+    background-color: transparent;
+}
+#handling_modal .modal-header{
+    position: relative;
+    background-color: rgba(102,7,4,.9);
+    border-bottom: 2px solid #450706;
+    padding: 9px 35px 8px;
+}
+#handling_modal .modal-body{
+    background-color: #0d1c2e; 
+    padding: 37px 0 0 0;
+    border-top: 2px solid #0d223b;
+    border-left: 2px solid #0d223b;
+    border-right: 2px solid #0d223b;
+}
+#handling_modal .modal-footer{
+    background-color: #0d1c2e; 
+    padding: 24px 52px;
+    border-top: 1px solid #1a3352;
+    border-bottom: 2px solid #0d223b;
+    border-left: 2px solid #0d223b;
+    border-right: 2px solid #0d223b;
+}
+#handling_modal .modal-title{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 16px;
+    color: #e0c5c5;
+    letter-spacing: 0.5px;
+    background: url(../../common/img/09_alram_icon_siren_header.png) no-repeat;
+    padding-left: 22px;
+    padding-top: 1px;
+}
+#handling_modal .top_area{
+    overflow: hidden;
+    padding: 0 56px;
+    margin-bottom: 16px;
+}
+#handling_modal .event_tit{
+    float: left;
+    font-family: 'NanumSquareR';
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+#handling_modal .event_tit strong{
+    color: #20ced5;
+}
+#handling_modal .event_info_wrap{
+    width: 900px;
+    padding: 0 56px 0 82px;
+    margin-bottom: 42px;
+    overflow: hidden;
+}
+#handling_modal .event_info{
+    float: left;
+    /*width: 240px;*/
+    width: 265px;
+    margin-right: 36px;
+    padding-top: 15px;
+    border-top: 1px solid #1a3352;
+}
+#handling_modal .event_loca{
+    float: left;
+    /*width: 624px;*/
+    width: 599px;
+    padding-top: 15px;
+    border-top: 1px solid #1a3352;
+}
+#handling_modal .sub_tit{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #849fc4;
+    letter-spacing: 0.5px;
+}
+#handling_modal .event_info .sub_tit{
+    margin-bottom: 10px;
+}
+#handling_modal .event_info dl{
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+}
+#handling_modal .event_info dt{
+    float: left;
+    width: 120px;
+    color: #4c6380;
+    line-height: 22px;
+}
+#handling_modal .event_info dd{
+    float: left;
+    color: #dde4ed;
+    letter-spacing: 1px;
+}
+#handling_modal .event_loca .sub_tit{
+    margin-bottom: 7px;
+}
+#handling_modal .plans_box{
+    width: 100%;
+    /*height: 141px;*/
+    height: 200px;
+    border: 1px solid #142b47;
+    box-sizing: border-box;
+}
+#handling_modal .plans_type{
+    width: 100%;
+    height: 20px;
+    background-color: #112742;
+    text-align: center;
+    border-bottom: 1px solid #142b47;
+}
+#handling_modal .plans_type span{
+    font-size: 12px;
+    color: #4c6380;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+#handling_modal .plans_img{
+    /*height: 121px;*/
+    height: 180px;
+    padding: 10px 7px 11px;
+    box-sizing: border-box;
+}
+#handling_modal .plans_img button{
+    width: 24px;
+    height: 100px;
+    margin-top: 27px;
+}
+#handling_modal .plans_img > img{
+    float: left;
+    display: inline-block;
+    /*width: 560px;*/
+    width: 535px;
+    /*height: 100px;*/
+    height: 159px;
+}
+#handling_modal .action_area{
+    position: relative;
+    padding: 0 56px;
+}
+#handling_modal .cons{
+    height: 257px;
+    padding-left: 22px;
+}
+#handling_modal .sms_wrap{
+    overflow: hidden;
+}
+#handling_modal .sms_wrap .sub_tit{
+    margin-bottom: 6px;
+}
+#handling_modal .sms_to_wrap{
+    float: left;
+    /*width: 240px;*/
+    width: 265px;
+    margin-right: 36px;
+}
+#handling_modal .sms_con_wrap{
+    float: left;
+    /*width: 624px;*/
+    width: 599px;
+}
+#handling_modal .sms_to{
+    height: 166px;
+    background-color: #122338;
+    border: 1px solid #142b47;
+    padding: 16px 0 16px 24px;
+}
+#handling_modal .sms_con textarea{
+    /*width: 570px;*/
+    width: 100%;
+    /*height: 160px;*/
+    height: 200px;
+    background-color: #122338;
+    padding: 19px 26px;
+    border: 1px solid #142b47;
+    box-sizing: border-box;
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    line-height: 20px;
+    color: #d4dbe4;
+    letter-spacing: 0.5px;
+    resize: none;
+}
+#handling_modal .sms_con textarea:focus{
+    border: 1px solid #2c64a8;
+}
+.modal-footer button{
+    font-size: 15px;
+    line-height: 15px;
+    color: #e6eaee;
+    padding: 9px 35px 10px;
+    margin: 0 6px;
+    border-radius: 2px;
+    letter-spacing: 0.25px;
+}
+.btn_eve_com{
+    background-color: #b81e16;
+}
+.btn_eve_com:hover{
+    background-color: #9e120b;
+}
+.btn_eve_com:active{
+    background-color: #851c17;
+}
+.btn_pop_cancle{
+    background-color: #354454;
+}
+.btn_pop_cancle:hover{
+    background-color: #293747;
+}
+.btn_pop_cancle:active{
+    background-color: #252f3b;
+}
+
+.sms_wrap .mCSB_scrollTools, .manual .mCSB_scrollTools{
+    width: 11px;
+}
+.sms_wrap .mCSB_scrollTools .mCSB_draggerContainer, .manual .mCSB_scrollTools .mCSB_draggerContainer{
+    top: -12px;
+    background-color: #0d1c2e;
+}
+.sms_wrap .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .manual .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 9px;
+    border-radius: 0;
+    background-color: #324862;
+}
+.sms_wrap .mCSB_scrollTools .mCSB_draggerRail, .manual .mCSB_scrollTools .mCSB_draggerRail{
+    display: none;
+}

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="KT" />
+	<meta name="description" content="KT" />
+	<title>GiGA Safe SOC</title>
+	<link rel="stylesheet" href="../common/css/common.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="./css/emergency.css" type="text/css"><!-- 이벤트 발생 css -->
+	<link rel="stylesheet" href="../common/css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jstree/style.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/select/selectric.css" type="text/css">
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/popper.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<script src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../common/js/marquee/jquery.marquee.min.js"></script>
+	<script src="../common/js/highcharts/highcharts.js"></script>
+	<script src="../common/js/jstree/jstree.min.js"></script>
+	<script src="../common/js/select/jquery.selectric.js"></script>
+	<script src="./js/emergency.js"></script><!-- 이벤트 발생 script -->
+	<script src="./js/statistics.js"></script>
+	<script src="../common/js/main.js"></script>
+</head>
+<body class="body">
+	<div id="wrap">
+		<header id="header">
+			<h1 class="logo">
+				<img src="../common/img/00_logo.png" alt="KT GIGA Safe SOC 로고 이미지">
+			</h1>
+			<h2 class="service_nm">포항시지진재난관리국</h2>
+			<div class="alert alert-dismissible fade show noti_alert" role="alert">
+				<span class="emergency">긴급</span>
+			  	[관리자] 금일 오후 4시 컨퍼런스 미팅 장소가 변경되었음을 알립니다.
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="func">
+				<a class="btn_admin" data-toggle="modal" data-target="#chg_admin_modal"></a>
+				<a class="btn_disaster_mode" data-toggle="modal" data-target="#mode_modal"></a>
+				<div class="alarm">
+					<a href="#" class="alarm_popover">
+						<img src="../common/img/00_GNB_icon_alram.png" alt="알람 아이콘 이미지">
+						<span class="badge badge-danger alarm_badge">14</span>
+					</a>
+				</div>
+				<div id="popover_content">
+					<table class="eve_alarm_table">
+						<colgroup>
+							<col style="width:60px" />
+							<col style="width:75px" />
+							<col style="width:35px" />
+							<col style="width:50px" />
+							<col style="width:80px" />
+							<col style="width:35px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>시설물 명</th>
+								<th>이벤트 명</th>
+								<th>등급</th>
+								<th>발생 위치</th>
+								<th>발생일시</th>
+								<th>상태</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="table_box">
+						<table class="eve_alarm_table">
+							<colgroup>
+								<col style="width:60px" />
+								<col style="width:75px" />
+								<col style="width:35px" />
+								<col style="width:50px" />
+								<col style="width:80px" />
+								<col style="width:35px" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="user">
+					<span class="user_id">KT admin</span>
+					<span class="user_state">로그아웃</span>
+				</div>
+			</div>
+		</header>
+
+		<!-- 이벤트 발생 -->
+		<div class="emergency_header">
+			<strong class="emergency_tit">임계치 초과 이벤트 발생</strong>
+			<ul class="emergency_control">
+				<li><button class="btn_eve_confirm" data-toggle="modal" data-target="#event_bigdata_modal">확인</button></li>
+				<li><button class="btn_eve_close">다음에</button></li>
+			</ul>
+		</div> 
+		<!-- 이벤트 발생 --> 
+
+		<section id="container">
+			<div class="menu">
+				<span class="menu_tit">Dashboard</span>
+				<div id="gnb">
+					<ul>
+						<li class="stats_mor active">
+							<a href="#">통계 모니터링</a>
+						</li>
+						<li class="rt_mor">
+							<a href="../realtime/index.html">실시간 모니터링</a>
+						</li>
+						<li class="fa_info">
+							<a href="../facility/index.html">시설물 정보</a>
+						</li>
+						<li class="eve_info">
+							<a href="../event/index.html">이벤트 정보</a>
+						</li>
+						<li class="chk_info">
+							<a href="../check/index.html">점검 정보</a>
+						</li>
+						<li class="sms_info">
+							<a href="../sms/index.html">SMS 정보</a>
+						</li>
+						<li class="voc_info">
+							<a href="../voc/index.html">VOC 정보</a>
+						</li>
+						<li class="noti">
+							<a href="../notice/index.html">공지사항</a>
+						</li>
+						<li class="menual last_list">
+							<a href="#">매뉴얼</a>
+						</li>
+					</ul>
+				</div>
+				<button class="show_hide_arrow"></button>
+			</div>
+			<div class="content_wrap horizontal">  <!-- horizontal, vertical 클래스를 이용하여 화면 전환 -->
+				<div class="map_wrap">
+					<div class="map_header">
+						<p class="map_location">경상북도 > 포항시 > 남구 > 해도동</p>
+					</div>
+					<div class="map">
+						<div class="legend">
+							<ul>
+								<li class="icon_bridge focus">교량<span class="fa_num">123</span></li>
+								<li class="icon_parking">주차장<span class="fa_num">123</span></li>
+								<li class="icon_tunnel">터널<span class="fa_num">123</span></li>
+								<li class="icon_cons">공사장<span class="fa_num">123</span></li>
+								<li class="icon_school">학교<span class="fa_num">123</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="realtime_con_wrap">
+					<div class="info_wrap">
+						<div class="info_box">
+							<div class="info_top">
+								<ul>
+									<li>
+										<div class="select_link select01">
+											<select>
+												<option value="경상북도">경상북도</option>
+												<option value="경상남도">경상남도</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<div class="select_link select02">
+											<select>
+												<option value="포항시">포항시</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<div class="select_link select03">
+											<select>
+												<option value="">남구</option>
+											</select>
+										</div>
+									</li>
+									<li>
+										<div class="select_link select04">
+											<select>
+												<option value="">해도동</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+								<button class="btn_chk">조회</button>
+							</div>
+							<div class="weather">
+								<div class="area">
+									<span class="city">경상북도 포항시</span>
+									<span class="district">남구 해도동</span>
+									<span class="icon_weather"></span>
+								</div>
+								<div class="tem_info">
+									<p class="temp_txt">22<span class="cel">&#8451;</span></p>
+									<ul class="temp_cast">
+										<li>
+											<p>때때로 흐림, 습도</p>
+											<p class="humi_info">
+												<span class="humi_per">77 %</span>
+											</p>
+										</li>
+										<li>
+											<p>
+												<span class="wind_dir"><span class="wind_dir_nm">북-북동</span>(
+													<span class="wind_arrow">&nbsp;</span>
+												)</span>
+												<span class="wind_vec">4.2 m/s</span>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="disaster_wrap">
+							<ul class="tab">
+								<li><a href="#info" class="active">지진 정보</a></li>
+								<li><a href="#news">News Feed</a></li>
+							</ul>
+							<div class="cons">
+								<div id="info" class="tab_con"> <!-- 데이터가 없으면 'none_info' 클래스 추가 -->
+									<p>지진 정보를 수집하지 못했습니다.</p> <!-- 부모요소에 'none_info' 클래스 적용시 표출 -->
+									<table class="dis_table mgb4">
+										<colgroup>
+											<col style="width:250px"/>
+											<col style="width:68px"/>
+											<col style="width:110px"/>
+											<col style="width:66px"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="text_l">발생처</th>
+												<th>규모</th>
+												<th>발생 일자</th>
+												<th>지도</th>
+											</tr>
+										</thead>
+									</table>
+									<div class="table_box mCustomScrollbar">
+										<table class="dis_table">
+											<colgroup>
+												<col style="width:250px"/>
+												<col style="width:68px"/>
+												<col style="width:110px"/>
+												<col style="width:66px"/>
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+												<tr>
+													<td>경북 포항시 북구 흥해읍 인근 7km 지점</td>
+													<td>2.1</td>
+													<td>2018/07/09</td>
+													<td>
+														<button class="btn_view">보기</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div id="news" class="tab_con"> <!-- 데이터가 없으면 'none_news' 클래스 추가 -->
+									<p>News Feed 정보를 수집하지 못했습니다.</p> <!-- 부모요소에 'none_news' 클래스 적용시 표출 -->
+									<ul class="news mCustomScrollbar">
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+										<li>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="img_wrap">
+						<ul>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교화태대교화태대교화태대교화태대교화태대교화태대교화태대교화태대교화태대교화태대교화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter error"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <button class="btn_detail">상세보기>></button> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li>
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li class="none_pic">
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+									<!-- <a href="#" class="btn_detail">상세보기>></a> -->
+								</div>
+							</li>
+							<li class="none_fa">
+								<!-- <p>시설물을<br/>등록하여 주십시오.</p> -->
+								<div class="img_info">
+									<span class="img_tit">화태대교</span>
+									<ul class="realtime">
+										<li class="icon_meter"></li>
+										<li class="icon_set"></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 이벤트 발생 팝업 -->
+			<div class="modal fade emergency" id="event_modal">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title">시설물 이상 진동이 감지되었습니다.</h5>
+			      		</div>
+			      		<div class="modal-body">
+							<div class="top_area">
+								<span class="event_tit">임계치 초과 이벤트</span>
+								<p class="event_day">
+									<span>2018-08-13</span>
+									<span>14:34:54</span>
+								</p>
+							</div>
+							<div class="event_info_wrap">
+								<div class="event_info">
+									<span class="sub_tit">이벤트 발생 정보</span>
+									<dl>
+										<dt>시설물 명</dt>
+										<dd>흥해초등학교</dd>
+										<dt>시설물 유형</dt>
+										<dd>교육기관</dd>
+										<dt>발생 위치</dt>
+										<dd>A-03</dd>
+										<dt>센서 유형</dt>
+										<dd>유선</dd>
+										<dt>센서 종류</dt>
+										<dd>가속도계</dd>
+										<dt>설정 임계치</dt>
+										<dd>X: 551.5/1554.4<br>Y: 551.5/1554.4</dd>
+										<dt>계측값</dt>
+										<dd>0.4</dd>
+									</dl>
+								</div>
+								<div class="event_loca">
+									<span class="sub_tit">이벤트 발생 위치</span>
+									<div class="plans_box">
+										<div class="plans_type">
+											<span>본관 1층</span>
+										</div>
+										<div class="plans_img">
+											<button class="left_arrow"></button>
+											<!-- <img src="" alt=""> --> <!-- 이미지 추후 추가 -->
+											<button class="right_arrow"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="action_area">
+								<ul class="tab">
+									<li><a href="#sms" class="active">SMS 전송</a></li>
+									<li><a href="#graph">이벤트 전/후 데이터</a></li>
+									<li><a href="#manual">대응 매뉴얼</a></li>
+								</ul>
+								<div class="cons">
+									<div id="sms" class="tab_con">
+										<div class="sms_wrap">
+											<div class="sms_to_wrap">
+												<span class="sub_tit">SMS 발송 대상</span>
+												<div class="sms_to mCustomScrollbar">
+													<div id="jstree">
+														<ul>
+													      <li>Root node 1
+													        <ul>
+													          <li>Child node 1</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													        </ul>
+													      </li>
+													      <li>Root node 2</li>
+													    </ul>
+													</div>
+												</div>
+											</div>
+											<div class="sms_con_wrap">
+												<span class="sub_tit">발송 내용</span>
+												<div class="sms_con">
+													<textarea name="comment" rows="11" cols="50">
+														
+													</textarea>
+												</div>
+											</div>
+										</div>
+									</div> <!-- 1. SMS 전송 -->
+									<div id="graph" class="tab_con"></div>
+									<div id="manual" class="tab_con">
+										<div class="manual_wrap">
+											<div class="manual_con"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+			      		</div>
+					    <div class="modal-footer emergency">
+					        <button type="button" class="btn_action" data-toggle="modal">SMS 전송</button>
+					        <button type="button" class="btn_cancle closeModal">닫기</button>
+					    </div> 
+			    	</div>
+			 	</div>
+			</div> <!-- Modal -->
+			<!-- 이벤트 발생 팝업 -->
+
+			<!-- 이벤트 발생 팝업 (빅데이터) -->
+			<div class="modal fade emergency" id="event_bigdata_modal">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+			        		<h5 class="modal-title">시설물 이상 진동이 감지되었습니다.</h5>
+			      		</div>
+			      		<div class="modal-body">
+							<div class="top_area">
+								<span class="event_tit">임계치 초과 이벤트</span>
+								<p class="event_day">
+									<span>2018-08-13</span>
+									<span>14:34:54</span>
+								</p>
+							</div>
+							<div class="event_info_wrap">
+								<div class="event_info">
+									<span class="sub_tit">이벤트 발생 정보</span>
+									<dl>
+										<dt>시설물 명</dt>
+										<dd>흥해초등학교</dd>
+										<dt>시설물 유형</dt>
+										<dd>교육기관</dd>
+										<dt>발생 위치</dt>
+										<dd>A-03</dd>
+										<dt>센서 유형</dt>
+										<dd>유선</dd>
+										<dt>센서 종류</dt>
+										<dd>가속도계</dd>
+										<dt>설정 임계치</dt>
+										<dd>X: 551.5/1554.4<br>Y: 551.5/1554.4</dd>
+										<dt>계측값</dt>
+										<dd>0.4</dd>
+									</dl>
+								</div>
+								<div class="event_loca">
+									<span class="sub_tit">빅데이터</span>
+									<div class="bigdata_box">
+										<div class="tit_area">
+											<span class="bigdata_tit">유지관리 시기_<strong>가속도계</strong></span>
+											<button class="btn_magn" data-toggle="modal" data-target="#chart_magn_modal">확대</button>
+										</div>
+										<div class="data_con_wrap">
+											<div class="graph" id="bigdata_graph"></div>
+											<!-- <div class="con_txt">
+												<ul class="txt_list mCustomScrollbar">
+													<li>
+														<strong class="status_a">A(우수)</strong>
+														<p> : 문제점이 없는 최상의 상태</p>
+													</li>
+													<li>
+														<strong class="status_b">B(양호)</strong>
+														<p> : 보조부재에 경미한 결함이  발생하였으나, 기능 발휘에는 지장이 없으며 내구성 증진을 위하여 일부의 보수가 필요한 상태</p>
+													</li>
+													<li>
+														<strong class="status_c">C(보통)</strong>
+														<p> : 주요부재에 경미한 결함 또는 보조부재에 광범위한 결함이 발생하였으나 전체적인 시설물의 안전에는 지 복사</p>
+													</li>
+													<li>
+														<strong class="status_d">D(미흡)</strong>
+														<p> : 주요부재에 결함이 발생하여 긴급한 보수 및 보강이 필요하며 사용 제한 여부를 결정하여야 하는 상태</p>
+													</li>
+													<li>
+														<strong class="status_e">E(불량)</strong>
+														<p> : 주요부재에 발생한 심각한 결함으로 인하여 시설물의 안전에 위험 에 있어 즉각 사용을 금지하고 보강 도는 개축을 하여야 하는 상태</p>
+												</ul>
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="action_area">
+								<ul class="tab">
+									<li><a href="#sms_con" class="active">SMS 전송</a></li>
+									<li><a href="#graph_con">이벤트 전/후 데이터</a></li>
+									<li><a href="#manual_con">대응 매뉴얼</a></li>
+								</ul>
+								<div class="cons">
+									<div id="sms_con" class="tab_con">
+										<div class="sms_wrap">
+											<div class="sms_to_wrap">
+												<span class="sub_tit">SMS 발송 대상</span>
+												<div class="sms_to mCustomScrollbar">
+													<div id="jstree02">
+														<ul>
+													      <li>Root node 1
+													        <ul>
+													          <li>Child node 1</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													        </ul>
+													      </li>
+													      <li>Root node 2</li>
+													    </ul>
+													</div>
+												</div>
+											</div>
+											<div class="sms_con_wrap">
+												<span class="sub_tit">발송 내용</span>
+												<div class="sms_con">
+													<textarea name="comment" rows="11" cols="50">
+														
+													</textarea>
+												</div>
+											</div>
+										</div>
+									</div> <!-- 1. SMS 전송 -->
+									<div id="graph_con" class="tab_con"></div>
+									<div id="manual_con" class="tab_con">
+										<div class="manual_wrap">
+											<div class="manual_con"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+			      		</div>
+					    <div class="modal-footer emergency">
+					        <button type="button" class="btn_action" data-toggle="modal">SMS 전송</button>
+					        <button type="button" class="btn_cancle closeModal">닫기</button>
+					    </div> 
+			    	</div>
+			 	</div>
+			</div> <!-- Modal -->
+			<!-- 이벤트 발생 팝업 (빅데이터) -->
+
+			<div class="modal fade" id="manual_modal">
+				<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title">대응 메뉴얼</h5>
+				        <p class="page_info">
+				        	<span class="cur_page">4</span>
+				        	<span class="slash">/</span>
+				        	<span class="ent_page">24</span>
+				        </p>
+				      </div>
+				      <div class="modal-body">
+				        <div class="manual_box">
+				        	<ul class="manual mCustomScrollbar">
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        		<li>qwe</li>
+				        	</ul>
+				        </div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn_cancle closeModal">닫기</button>
+				      </div>
+				    </div>
+				</div>
+			</div> <!-- 대응 매뉴얼 팝업 -->
+			<div class="modal fade" id="chart_magn_modal">
+				<div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-body">
+				      	<span class="tit">유지관리 시기_<strong>가속도계</strong></span>
+				        <div class="graph" id="magn_bigdata_graph">
+
+				        </div>
+				        <div class="con_txt">
+							<ul class="txt_list mCustomScrollbar">
+								<li>
+									<strong class="status_a">A(우수)</strong>
+									<p> : 문제점이 없는 최상의 상태</p>
+								</li>
+								<li>
+									<strong class="status_b">B(양호)</strong>
+									<p> : 보조부재에 경미한 결함이  발생하였으나, 기능 발휘에는 지장이 없으며 내구성 증진을 위하여 일부의 보수가 필요한 상태</p>
+								</li>
+								<li>
+									<strong class="status_c">C(보통)</strong>
+									<p> : 주요부재에 경미한 결함 또는 보조부재에 광범위한 결함이 발생하였으나 전체적인 시설물의 안전에는 지 복사</p>
+								</li>
+								<li>
+									<strong class="status_d">D(미흡)</strong>
+									<p> : 주요부재에 결함이 발생하여 긴급한 보수 및 보강이 필요하며 사용 제한 여부를 결정하여야 하는 상태</p>
+								</li>
+								<li>
+									<strong class="status_e">E(불량)</strong>
+									<p> : 주요부재에 발생한 심각한 결함으로 인하여 시설물의 안전에 위험 에 있어 즉각 사용을 금지하고 보강 도는 개축을 하여야 하는 상태</p>
+								</li>
+							</ul>
+						</div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn_cancle closeModal">확인</button>
+				      </div>
+				    </div>
+				</div>
+			</div> <!-- 빅데이터 차트 확대 팝업 -->
+		</section>
+		<footer id="footer" class="marquee">
+			<p>[KBS2] 포항시 남구 연일읍 연일대교, 섬안큰다리 등 지진으로 피해 심각 지역 주민 피난 경보 발령</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+			<p>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피해 촉발</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+		</footer>
+	</div>
+</body>
+</html>

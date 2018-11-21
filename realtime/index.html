@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="KT" />
+	<meta name="description" content="KT" />
+	<title>GiGA Safe SOC</title>
+	<link rel="stylesheet" href="../common/css/common.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/select/selectric.css" type="text/css">
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/popper.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<script src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../common/js/marquee/jquery.marquee.min.js"></script>
+	<script src="../common/js/highcharts/highcharts.js"></script>
+	<script src="../common/js/select/jquery.selectric.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="../common/js/main.js"></script>
+</head>
+<body class="body">
+	<div id="wrap">
+		<header id="header">
+			<h1 class="logo">
+				<img src="../common/img/00_logo.png" alt="KT GIGA Safe SOC 로고 이미지">
+			</h1>
+			<h2 class="service_nm">포항시지진재난관리국</h2>
+			<div class="alert alert-dismissible fade show noti_alert" role="alert">
+				<span class="emergency">긴급</span>
+			  	[관리자] 금일 오후 4시 컨퍼런스 미팅 장소가 변경되었음을 알립니다.
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="func">
+				<a class="btn_admin" data-toggle="modal" data-target="#chg_admin_modal"></a>
+				<a class="btn_disaster_mode" data-toggle="modal" data-target="#mode_modal"></a>
+				<div class="alarm">
+					<a href="#" class="alarm_popover">
+						<img src="../common/img/00_GNB_icon_alram.png" alt="알람 아이콘 이미지">
+						<span class="badge badge-danger alarm_badge">14</span>
+					</a>
+				</div>
+				<div id="popover_content">
+					<table class="eve_alarm_table">
+						<colgroup>
+							<col style="width:60px" />
+							<col style="width:75px" />
+							<col style="width:35px" />
+							<col style="width:50px" />
+							<col style="width:80px" />
+							<col style="width:35px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>시설물 명</th>
+								<th>이벤트 명</th>
+								<th>등급</th>
+								<th>발생 위치</th>
+								<th>발생일시</th>
+								<th>상태</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="table_box">
+						<table class="eve_alarm_table">
+							<colgroup>
+								<col style="width:60px" />
+								<col style="width:75px" />
+								<col style="width:35px" />
+								<col style="width:50px" />
+								<col style="width:80px" />
+								<col style="width:35px" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="user">
+					<span class="user_id">KT admin</span>
+					<a class="user_state">Logout</a>
+				</div>
+			</div>
+		</header>
+		<section id="container">
+			<div class="menu">
+				<span class="menu_tit">Dashboard</span>
+				<div id="gnb">
+					<ul>
+						<li class="stats_mor">
+							<a href="../statistics/index.html">통계 모니터링</a>
+						</li>
+						<li class="rt_mor active">
+							<a href="#">실시간 모니터링</a>
+						</li>
+						<li class="fa_info">
+							<a href="../facility/index.html">시설물 정보</a>
+						</li>
+						<li class="eve_info">
+							<a href="../event/index.html">이벤트 정보</a>
+						</li>
+						<li class="chk_info">
+							<a href="../check/index.html">점검 정보</a>
+						</li>
+						<li class="sms_info">
+							<a href="../sms/index.html">SMS 정보</a>
+						</li>
+						<li class="voc_info">
+							<a href="../voc/index.html">VOC 정보</a>
+						</li>
+						<li class="noti">
+							<a href="../notice/index.html">공지사항</a>
+						</li>
+						<li class="menual last_list">
+							<a href="#">매뉴얼</a>
+						</li>
+					</ul>
+				</div>
+				<button class="show_hide_arrow"></button>
+			</div>
+			<div class="content_wrap">
+				<div class="map_wrap">
+					<div class="map_header">
+						<p class="map_location">경상북도 > 포항시 > 남구 > 해도동</p>
+					</div>
+					<div class="map">
+						<div class="legend">
+							<ul>
+								<li class="icon_bridge">교량</li>
+								<li class="icon_parking">주차장</li>
+								<li class="icon_tunnel">터널</li>
+								<li class="icon_cons">공사장</li>
+								<li class="icon_school">학교</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="data_wrap">
+					<div class="left_wrap">
+						<div class="event_pro_status">
+							<span class="con_tit">이벤트 등록 및 처리 현황</span>
+							<ul class="pie_chart mCustomScrollbar case01">  <!-- 차트 개수에 따른 클래스 변경 (case01, case02) -->
+								<li>  
+									<div class="graph_area" id="graph_bridge"></div>
+									<div class="graph_info">
+										<span class="graph_tit bridge">교량</span>
+										<div class="graph_status">
+											<dl>
+												<dt class="red">발생</dt>
+												<dd><span class="middot">&middot; &middot; &middot; &middot; &middot;</span>126</dd>
+											</dl>
+											<dl>
+												<dt class="yellow">처리중</dt>
+												<dd><span class="middot">&middot; &middot; &middot; &middot; &middot;</span>62</dd>
+											</dl>
+											<dl>
+												<dt class="mint">완료</dt>
+												<dd><span class="middot">&middot; &middot; &middot; &middot; &middot;</span>34</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="event_grade">
+							<span class="con_tit">이벤트 등급별 통계</span>
+							<div class="graph_area" id="graph_grade"></div>
+						</div>
+						<div class="event_result">
+							<div class="con_header">
+								<span class="con_tit">이벤트 발생 현황</span>
+								<div class="select_link">
+									<select>
+										<option value="전체">전체</option>
+										<option value="전체">전체</option>
+									</select>
+								</div>
+								<ul class="select_period">
+									<li><button>년</button></li>
+									<li><button class="active">월</button></li>
+									<li><button>일</button></li>
+								</ul>
+							</div>
+							<div class="graph_area" id="graph_result">
+								
+							</div>
+						</div>
+					</div> <!-- class="left_wrap" -->
+					<div class="right_wrap">
+						<div class="event_pro_status">
+							<span class="con_tit">이벤트 등록 및 처리 현황</span>
+							<ul class="pie_chart mCustomScrollbar case01">  <!-- 차트 개수에 따른 클래스 변경 (case01, case02) -->
+								<li>  
+									<div class="graph_area" id="graph_pie"></div>
+									<div class="graph_info">
+										<span class="graph_tit bridge">교량</span>
+										<div class="graph_status">
+											<dl>
+												<dt class="red">발생</dt>
+												<dd><span class="middot">&middot; &middot; &middot; &middot; &middot;</span>126</dd>
+											</dl>
+											<dl>
+												<dt class="yellow">처리중</dt>
+												<dd><span class="middot">&middot; &middot; &middot; &middot; &middot;</span>62</dd>
+											</dl>
+											<dl>
+												<dt class="mint">완료</dt>
+												<dd><span class="middot">&middot; &middot; &middot; &middot; &middot;</span>34</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="event_grade">
+							<span class="con_tit">이벤트 등급별 통계</span>
+							<div class="graph_area" id="graph_grade02"></div>
+						</div>
+						<div class="event_result">
+							<div class="con_header">
+								<span class="con_tit">이벤트 발생 현황</span>
+								<div class="select_link">
+									<select>
+										<option value="전체">전체</option>
+										<option value="전체">전체</option>
+									</select>
+								</div>
+								<ul class="select_period">
+									<li><button>년</button></li>
+									<li><button class="active">월</button></li>
+									<li><button>일</button></li>
+								</ul>
+							</div>
+							<div class="graph_area" id="graph_result02">
+								
+							</div>
+						</div>
+					</div> <!-- class="right_wrap" -->
+				</div>
+			</div>
+		</section>
+		<footer id="footer" class="marquee">
+			<p>[KBS2] 포항시 남구 연일읍 연일대교, 섬안큰다리 등 지진으로 피해 심각 지역 주민 피난 경보 발령</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+			<p>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피해 촉발</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+		</footer>
+	</div>
+</body>
+</html>

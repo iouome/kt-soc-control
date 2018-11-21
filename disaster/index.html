@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="KT" />
+	<meta name="description" content="KT" />
+	<title>GiGA Safe SOC</title>
+	<link rel="stylesheet" href="../common/css/common.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jstree/style.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/select/selectric.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/timeline/timeline.css" type="text/css">
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<script src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../common/js/jstree/jstree.min.js"></script>
+	<script src="../common/js/highcharts/highcharts.js"></script>
+	<script src="../common/js/marquee/jquery.marquee.min.js"></script>
+	<script src="../common/js/select/jquery.selectric.js"></script>
+	<script src="../common/js/main.js"></script>
+	<script src="./js/disaster.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="header">
+			<h1 class="logo">
+				<img src="../common/img/00_logo.png" alt="KT GIGA Safe SOC 로고 이미지">
+			</h1>
+			<div class="func">
+				<button class="btn_mode" data-toggle="modal" data-target="#mode_modal"></button>
+			</div>
+		</header>
+		<section id="container" class="disaster_mode">
+			<div class="content_wrap">
+				<div class="map_wrap">
+					<div class="map">
+						<div class="map_header">
+							<p class="map_location">경상북도 > 포항시 > 남구 > 해도동</p>
+						</div>
+						<div class="legend">
+							<ul>
+								<li class="icon_bridge">교량</li>
+								<li class="icon_parking">주차장</li>
+								<li class="icon_tunnel">터널</li>
+								<li class="icon_cons">공사장</li>
+								<li class="icon_school">학교</li>
+							</ul>
+						</div>
+					</div>
+				</div> <!-- GIS -->
+				<div class="timeline_wrap">
+					<div class="timeline_hd">
+						<span class="tit">최초 상황 이벤트 발생</span>
+						<span class="date">&lt; 2018/07/07 | 14:43 &gt;</span>
+					</div>
+					<div class="timeline mCustomScrollbar">
+						<div id="timeline">
+							<!-- Timeline Item, copy from here to create various boxes -->
+							<div class="timeline-item damage">
+								<!--Icon inside the circle-->
+								<div class="timeline-icon">
+									<img src="img/2disaster_timeline_icon_event.png" alt="이벤트 발생 아이콘">
+								</div>
+								<!-- Content from timeline box and position (right or left)-->
+								<div class="timeline-content left">
+									<h2>LOREM IPSUM DOLOR</h2>
+									<p>
+										시설물 총 6개, 이벤트 발생 총 12건
+									</p>
+									<!-- <span class="time">12:22:34</span> -->
+									<a href="#" class="btn_eve_detail" data-toggle="modal" data-target="#eve_detail_modal">자세히 보기&gt;</a>
+								</div>
+								<span class="time">12:22:34</span>
+							</div>
+							<div class="timeline-item sms">
+								<!--Icon inside the circle-->
+								<div class="timeline-icon">
+									<img src="img/2disaster_timeline_icon_communicate.png" alt="SMS 발송 아이콘">
+								</div>
+								<!-- Content from timeline box and position (right or left)-->
+								<div class="timeline-content right">
+									<h2>LOREM IPSUM DOLOR</h2>
+									<p class="detail">
+										흥해초등학교를 중심으로 인근 5개 학교 에 설치된 가속도 센서에서 총 17건의  이상 이벤트가 발생. 이에 따라 각 담당부서의 담당관은 각 부서의 장에게 
+									</p>
+									<a href="#" class="btn">자세히 보기&gt;</a>
+								</div>
+								<span class="time right">12:22:34</span>
+							</div>
+							<div class="timeline-item damage">
+								<!--Icon inside the circle-->
+								<div class="timeline-icon">
+									<img src="img/2disaster_timeline_icon_event.png" alt="이벤트 발생 아이콘">
+								</div>
+								<!-- Content from timeline box and position (right or left)-->
+								<div class="timeline-content left">
+									<h2>LOREM IPSUM DOLOR</h2>
+									<p>
+										시설물 총 3개, 이벤트 발생 총 7건
+									</p>
+									<a href="#" class="btn_eve_detail" data-toggle="modal" data-target="#eve_detail_modal">자세히 보기&gt;</a>
+								</div>
+								<span class="time">12:22:34</span>
+							</div>
+							<div class="timeline-item respond">
+								<!--Icon inside the circle-->
+								<div class="timeline-icon">
+									<img src="img/2disaster_timeline_icon_message.png" alt="메시지 전파 아이콘">
+								</div>
+								<!-- Content from timeline box and position (right or left)-->
+								<div class="timeline-content right">
+									<h2>LOREM IPSUM DOLOR</h2>
+									<p class="detail">
+										대도초등학교 1층 현관, 진동 감지 센서에서 최초 임계치 초과 이벤트 발생.
+									</p>
+									<a href="#" class="btn">자세히 보기&gt;</a>
+								</div>
+								<span class="time right">12:22:34</span>
+							</div>
+							<div class="timeline-item respond">
+								<!--Icon inside the circle-->
+								<div class="timeline-icon">
+									<img src="img/2disaster_timeline_icon_message.png" alt="메시지 전파 아이콘">
+								</div>
+								<!-- Content from timeline box and position (right or left)-->
+								<div class="timeline-content right">
+									<h2>LOREM IPSUM DOLOR</h2>
+									<p class="detail">
+										대도초등학교 1층 현관, 진동 감지 센서에서 최초 임계치 초과 이벤트 발생.
+									</p>
+									<a href="#" class="btn">자세히 보기&gt;</a>
+								</div>
+								<span class="time right">12:22:34</span>
+							</div>
+							<div class="timeline-item sms">
+								<!--Icon inside the circle-->
+								<div class="timeline-icon">
+									<img src="img/2disaster_timeline_icon_communicate.png" alt="SMS 발송 아이콘">
+								</div>
+								<!-- Content from timeline box and position (right or left)-->
+								<div class="timeline-content right">
+									<h2>LOREM IPSUM DOLOR</h2>
+									<p class="detail">
+										대도초등학교 1층 현관, 진동 감지 센서에서 최초 임계치 초과 이벤트 발생.
+									</p>
+									<a href="#" class="btn" data-toggle="modal" data-target="#sms_detail_modal">자세히 보기&gt;</a>
+								</div>
+								<span class="time right">12:22:34</span>
+							</div>
+						</div>
+					</div>
+					<div class="timeline_ft">
+						<button data-toggle="modal" data-target="#end_modal">상황종료</button>
+					</div>
+				</div>
+				<div class="communi_wrap">
+					<ul class="tab">
+						<li><a href="#communi" class="active">상황기록 및 전파</a></li>
+						<li><a href="#manual">대응 메뉴얼</a></li>
+					</ul>
+					<div class="cons">
+						<div id="communi" class="tab_con">
+							<div class="msg_communi">
+								<span class="con_tit">메시지 전파</span>
+								<div class="cir_communi_box">
+									<ul class="box_tit">
+										<li>메시지 전송 대상</li>
+										<li>메시지 전송 제목 및 내용</li>
+									</ul>
+									<div class="con">
+										<div class="sms_to_wrap">
+											<span class="item_tit">수신인</span>
+											<div class="sms_to mCustomScrollbar">
+												<div id="msg_jstree">
+													<ul>
+												      <li>Root node 1
+												        <ul>
+												          <li>Child node 1</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												        </ul>
+												      </li>
+												      <li>Root node 2</li>
+												    </ul>
+												</div>
+											</div>
+										</div>
+										<div class="sms_con_wrap">
+											<span class="item_tit">제목</span>
+											<div class="sms_con mgb">
+												<textarea cols="30" rows="10"></textarea>
+											</div>
+											<span class="item_tit">내용</span>
+											<div class="sms_con big">
+												<textarea cols="30" rows="10"></textarea>
+											</div>
+										</div>
+									</div>
+									<button class="btn_sending"  data-toggle="modal" data-target="#msg_ask_modal">전송</button>
+								</div>
+							</div>
+							<div class="cir_communi">
+								<span class="con_tit">상황 전파</span>
+								<div class="cir_communi_box">
+									<ul class="box_tit">
+										<li>SMS 발송 대상</li>
+										<li>SMS 발송 내용</li>
+									</ul>
+									<div class="con">
+										<div class="sms_to_wrap">
+											<span class="item_tit">수신인</span>
+											<div class="sms_to mCustomScrollbar">
+												<div id="sms_jstree">
+													<ul>
+												      <li>Root node 1
+												        <ul>
+												          <li>Child node 1</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												          <li>Child node 2</li>
+												        </ul>
+												      </li>
+												      <li>Root node 2</li>
+												    </ul>
+												</div>
+											</div>
+										</div>
+										<div class="sms_con_wrap">
+											<span class="item_tit">제목</span>
+											<div class="sms_con mgb">
+												<textarea cols="30" rows="10"></textarea>
+											</div>
+											<span class="item_tit">내용</span>
+											<div class="sms_con big">
+												<textarea cols="30" rows="10"></textarea>
+											</div>
+										</div>
+									</div>
+									<button class="btn_sending"  data-toggle="modal" data-target="#sms_ask_modal">전파</button>
+								</div>
+							</div>
+						</div>
+						<div id="manual" class="tab_con">
+							<select>
+								<option value="붕괴">붕괴</option>
+								<option value="지진">지진</option>
+								<option value="태풍">태풍</option>
+								<option value="화재">화재</option>
+								<option value="홍수">홍수</option>
+							</select>
+							<div class="manual_box">
+								<div class="img_box mCustomScrollbar">
+									<!-- <img src="" alt="">
+									<img src="" alt="">
+									<img src="" alt=""> --> <!-- 이미지 추후 추가 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade pop_style" id="mode_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">일반 평시 관제 화면으로<br /><strong>전환</strong>하시겠습니까?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">전환하기</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 화면 전환 팝업 -->
+			<div class="modal fade pop_style" id="end_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">수고하셨습니다.<br />상황을 <strong>종료</strong>하시겠습니까?</p>
+							<p class="sub_txt">_종료 전 모든 데이터는 저장되며 평시 관제 화면으로 전환 됩니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">상황 종료</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 상황 종료 팝업 -->
+			<div class="modal fade pop_style" id="sms_fail_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">SMS 전송에 실패하였습니다.<br /><strong>재전송</strong>하시겠습니까?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">재전송</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">닫기</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- SMS 전송 실패 팝업 -->
+			<div class="modal fade pop_style" id="sms_com_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">정상적으로 SMS 발송을<br /><strong>완료</strong>하였습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- SMS 전송 완료 팝업 -->
+			<div class="modal fade pop_style" id="sms_err_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content"><strong>발송 대상</strong> 또는 <strong>내용</strong>을<br />확인하여 주십시오.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_cancle" data-dismiss="modal">닫기</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- SMS 입력 오류 팝업 -->
+			<!-- <div class="modal fade pop_style" id="sms_ask_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">선택한 대상과 입력한 내용의<br />SMS를 <strong>발송</strong>하시겠습니까?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">SMS 발송</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div> --><!-- SMS 발송 확인 팝업 -->
+			<div class="modal fade pop_style" id="msg_ask_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<div class="sms_to_wrap">
+								<span class="pop_con_tit">전송 대상</span>
+								<div class="sms_to_box">
+									<ul class="mCustomScrollbar">
+										<li>포항시청</li>
+										<li>시장</li>
+										<li>부시장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+									</ul>
+								</div>
+							</div>
+							<div class="sms_con_wrap">
+								<span class="pop_con_tit">전송 내용</span>
+								<div class="sms_con_box mCustomScrollbar">
+									<div class="item">
+										<span>이벤트 명: </span>
+										<p class="sms_con_data">균열 가속도계 C 등급 이벤트</p>
+									</div>
+									<div class="item">
+										<span>시설명: </span>
+										<p class="sms_con_data">흥해초등학교</p>
+									</div>
+									<div class="item">
+										<span>발생 위치: </span>
+										<p class="sms_con_data">A-27</p>
+									</div>
+									<div class="item">
+										<span>발생 시간: </span>
+										<p class="sms_con_data">2018-05-21 18:34:34</p>
+									</div>
+									<div class="item">
+										<span>내용: </span>
+										<p class="sms_con_data">담당부서 및 담당자 대응요청 및 시설내/외 대피소로 즉시 대피</p>
+									</div>
+								</div>
+							</div>
+							<div class="info_txt">
+								<p>선택한 대상과<br>입력하신 내용의<br>메시지를 <strong>전송</strong><br>하시겠습니까?</p>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">메시지 전송</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 메시지 전송 확인 팝업(수정) -->
+			<div class="modal fade pop_style" id="sms_ask_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<div class="sms_to_wrap">
+								<span class="pop_con_tit">발송 대상</span>
+								<div class="sms_to_box">
+									<ul class="mCustomScrollbar">
+										<li>포항시청</li>
+										<li>시장</li>
+										<li>부시장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+										<li>지진대책국 국장</li>
+									</ul>
+								</div>
+							</div>
+							<div class="sms_con_wrap">
+								<span class="pop_con_tit">발송 내용</span>
+								<div class="sms_con_box mCustomScrollbar">
+									<div class="item">
+										<span>이벤트 명: </span>
+										<p class="sms_con_data">균열 가속도계 C 등급 이벤트</p>
+									</div>
+									<div class="item">
+										<span>시설명: </span>
+										<p class="sms_con_data">흥해초등학교</p>
+									</div>
+									<div class="item">
+										<span>발생 위치: </span>
+										<p class="sms_con_data">A-27</p>
+									</div>
+									<div class="item">
+										<span>발생 시간: </span>
+										<p class="sms_con_data">2018-05-21 18:34:34</p>
+									</div>
+									<div class="item">
+										<span>내용: </span>
+										<p class="sms_con_data">담당부서 및 담당자 대응요청 및 시설내/외 대피소로 즉시 대피</p>
+									</div>
+								</div>
+							</div>
+							<div class="info_txt">
+								<p>선택한 대상과<br>입력하신 내용의<br>SMS를 <strong>발송</strong><br>하시겠습니까?</p>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action">SMS 발송</button>
+							<button type="button" class="btn_cancle" data-dismiss="modal">취소</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- SMS 발송 확인 팝업(수정) -->
+			<div class="modal fade pop_style" id="dmg_eve_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">타임라인에 <strong>피해 이벤트</strong>를<br />등록하였습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 피해 이벤트 입력 완료 팝업 -->
+			<div class="modal fade pop_style" id="eve_act_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">타임라인에 <strong>이벤트 대응</strong>을<br />등록하였습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 이벤트 대응 입력 완료 팝업 -->
+			<div class="modal fade pop_style" id="input_err_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content"><strong>제목 및 내용</strong> 또는 <strong>시간</strong>을<br />확인하여 주십시오.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_cancle" data-dismiss="modal">닫기</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 입력 오류 팝업 -->
+			<div class="modal fade pop_style" id="input_fail_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<p class="content">타임라인에 등록을<br /><strong>실패</strong>하였습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 입력 실패 팝업 -->
+			<div class="modal fade pop_style" id="eve_detail_modal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+				  	<div class="modal-content">
+						<div class="modal-body">
+							<div class="modal_top">
+								<span class="modal_tit">재난상황 이벤트 발생</span>
+								<div class="eve_day">
+									<span class="date">2018-10-12</span>
+									<span>10:52:48</span>
+								</div>
+							</div>
+							<table class="eve_detail_table">
+								<colgroup>
+									<col style="width:48px"/>
+									<col style="width:176px"/>
+									<col style="width:64px"/>
+									<col style="width:64px"/>
+									<col style="width:64px"/>
+									<col style="width:64px"/>
+									<col style="width:76px"/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>시설명</th>
+										<th>관심</th>
+										<th>주의</th>
+										<th>경계</th>
+										<th>심각</th>
+										<th>총 이벤트</th>
+									</tr>
+								</thead>
+							</table>
+							<div class="table_box mCustomScrollbar">
+								<table class="eve_detail_table">
+									<colgroup>
+										<col style="width:48px"/>
+										<col style="width:176px"/>
+										<col style="width:64px"/>
+										<col style="width:64px"/>
+										<col style="width:64px"/>
+										<col style="width:64px"/>
+										<col style="width:76px"/>
+									</colgroup>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td>흥해초등학교</td>
+											<td>관심</td>
+											<td>주의</td>
+											<td>경계</td>
+											<td>심각</td>
+											<td>총 이벤트</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn_action" data-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div> <!-- 타임라인 이벤트 자세히 보기 팝업 -->
+		</section>
+		<footer id="footer" class="marquee">
+			<p>[KBS2] 포항시 남구 연일읍 연일대교, 섬안큰다리 등 지진으로 피해 심각 지역 주민 피난 경보 발령</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+			<p>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피해 촉발</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+		</footer>
+	</div>
+</body>
+</html>

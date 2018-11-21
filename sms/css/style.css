@@ -1,0 +1,283 @@
+/* ---- 컨텐츠 영역 ----  */
+.left_side_wrap{
+	float: left;        
+	width: 546px;
+	margin-right: 14px;
+}
+.data_wrap{
+    position: relative;
+    float: left;
+    width: 1106px;
+    height: 910px;
+    padding: 14px 0 28px 25px;
+    background-color: #052237;
+    border-top: 1px solid #1b2f3f;
+    border-bottom: 1px solid #030b11;
+    box-sizing: border-box;
+}
+.left_side_wrap > div{
+	width: 100%;
+	/*height: 294px;*/
+    height: 191px;
+	padding: 15px 25px 14px;
+	background-color: #052237;
+	border-top: 1px solid #1b2f3f;
+    border-bottom: 1px solid #030b11;
+    box-sizing: border-box;
+}
+
+/* ---- 공통요소 ---- */
+.con_tit{
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #87aac7;
+    letter-spacing: 1px;
+    padding-bottom: 16px;
+}
+
+/*  SMS 발송 현황  */
+.left_side_wrap .sms_status{
+    height: 294px;
+	margin-bottom: 13px;
+}
+.sms_status .con_tit{
+	padding-bottom: 63px;
+}
+.sms_status .graph{
+	float: left;
+	width: 152px;
+	height: 152px;
+	margin-left: 36px;
+	margin-right: 47px;
+}
+.status_data{
+	float: left;
+	margin-top: 32px;
+}
+.status_data dl{
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+}
+.status_data dt {
+    float: left;
+}
+.status_data dd {
+    float: left;
+}
+.status_data .auto
+{
+    color: #1c66c7;
+}
+.status_data .manual
+{
+    color: #1ca9b3;
+}
+.status_data .fail
+{
+    color: #ff545d;
+}
+.status_data .middot{
+    color: #114061;  
+    margin: 0 24px;
+}
+
+/*  SMS 수동 발송 통계  */
+.sms_manual_status{
+	margin-bottom: 15px;
+}
+.sms_manual_status .con_tit{
+    padding-bottom: 15px;
+}
+.sms_manual_status .graph{
+    /*height: 216px;*/
+    height: 133px;
+}
+
+/*  SMS 자동 발송 통계  */
+.sms_auto_status{
+    margin-bottom: 15px;
+}
+.sms_auto_status.mgb0{
+    margin-bottom: 0;
+}
+.sms_auto_status .graph{
+    /*height: 216px;*/
+    height: 133px;
+}
+.sms_auto_status .con_tit{
+    padding-bottom: 15px;
+}
+
+/*  SMS 내역  */
+.data_wrap .table_box{
+    height: 793px;
+}
+.sms_history_table{
+    width: 1053px;
+}
+.sms_history_table.mgb{
+    margin-bottom: 5px;
+}
+.sms_history_table th {
+    height: 34px;
+    font-size: 15px;
+    line-height: 40px;
+    color: #53748f;
+    background-color: #082c45;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.sms_history_table tbody tr {
+    border-bottom: 1px solid #0a3452;
+    border-style: inset;
+}
+.sms_history_table thead th:nth-child(3), .sms_history_table thead th:nth-child(4), .sms_history_table tbody td:nth-child(3), .sms_history_table tbody td:nth-child(4){
+    text-align: left;
+    padding-left: 23px;
+}
+.sms_history_table tbody .active {
+    background-color: rgba(14,88,173,.5);
+    border: 1px solid #0e58ad;
+}
+.sms_history_table td {
+    font-size: 16px;
+    line-height: 16px;
+    color: #dee7ee;
+    text-align: center;
+    padding: 12px 0;
+}
+.sms_history_table .attention{
+    color: #0fb4ba;
+}
+.sms_history_table .caution{
+    color: #ffa66a;
+}
+.sms_history_table .alert{
+    color: #f94953;
+    border: none;  /* bootstrap 스타일 이슈 */
+}
+.sms_history_table .serious{
+    color: #ba2b95;
+}
+.btn_resend{
+    font-size: 12px;
+    line-height: 24px;
+    color: #d3e5f5;
+    letter-spacing: 0.5px;
+    width: 72px;
+    height: 24px;
+    background-color: #1272e0;
+    text-align: center;
+    border-radius: 2px;
+}
+.btn_resend:hover{
+    background-color: #065ec2;
+}
+
+/* sms 재확인 팝업 */
+#reconfirm_modal .modal-dialog{
+    max-width: 826px;
+    margin: 324px auto 0;    
+}
+#reconfirm_modal .modal-content{
+    background-color: #0d1c2e;
+    border: 2px solid #0d223b;
+}
+#reconfirm_modal .modal-body{
+    padding: 44px 58px 36px;
+}
+#reconfirm_modal .modal-footer{
+    padding: 24px 60px 25px;
+    border-top: 1px solid #1a3352;
+}
+.top_area > span{
+    display: block;
+    font-family: 'NanumSquareR';
+    font-size: 22px;
+    line-height: 22px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 13px;
+}
+#reconfirm_modal .con_area{
+    width: 710px;
+    padding-top: 17px;
+    border-top: 1px solid #1a3352;
+}
+.sms_to_wrap{
+    float: left;
+    width: 270px;   
+    margin-right: 26px;
+}
+.sms_to_box{
+    width: 100%;
+    height: 200px;
+    background-color: #122338;
+    border: 1px solid #142b47;
+    box-sizing: border-box;
+    padding: 15px 0 15px 24px;
+}
+.sms_to_box .jstree-default .jstree-themeicon{
+    display: inline-block;
+}
+.sms_con_wrap{
+    float: left;
+    width: 414px;   
+}
+.sms_con_box{
+    width: 100%;
+    height: 200px;
+    background-color: #122338;
+    border: 1px solid #142b47;
+    box-sizing: border-box;
+    padding: 21px 0 21px 27px;
+}
+.sms_con_box .item {
+    display: block;
+    font-family: 'NanumSquareR';
+    font-size: 12px;
+    color: #d4dbe4;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.sms_con_box .item > span {
+    float: left;
+    margin-right: 5px;
+}
+.sms_con_box .sms_con_data {
+    overflow: hidden;
+}
+.sms_to_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .sms_con_box .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    top: -7px;
+    width: 6px;
+    background-color: #47597a;
+    border-radius: 0;
+}
+.sms_con_box .mCSB_container{
+    padding-right: 27px;
+}
+.pop_con_tit{
+    display: inline-block;
+    font-size: 14px;
+    color: #849fc4;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+#reconfirm_modal .btn_confirm{
+    width: 98px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #1272e0;
+    font-size: 15px;
+    color: #e6eaee;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+}
+#reconfirm_modal .btn_confirm:hover {
+    background-color: #065ec2;
+}

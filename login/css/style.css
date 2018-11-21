@@ -1,0 +1,688 @@
+@charset "utf-8";
+
+#wrap.login{
+	background: url(../img/00_login_bg.jpg) no-repeat 50% 0;
+	width: 100%;
+	height: 1080px;
+	padding: 0;
+}
+
+.login_lg{
+    width: 270px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 267px;
+}
+.login_lg_sub{
+	font-family: 'DroidSansFallback';
+	font-size: 15px;
+	color: #929bab;
+    text-align: center;
+    margin-top: -8px;
+    padding-bottom: 25px;
+}
+.login .login_box{
+	width: 406px;
+	/* height: 435px; */
+	margin: 0 auto;
+	background-color: rgba(255,255,255,.07);
+}
+.login .login_box .box_inner_header{
+	position: relative;
+	padding: 25px 38px 18px;
+}
+.login .login_box .box_inner_con{
+	padding: 25px 37px 0;
+	border-bottom: 1px solid rgba(0,0,0,.22);
+}
+.login .login_box .box_inner_footer{
+	padding: 18px 0 27px;
+	border-top: 1px solid rgba(255,255,255,.11);
+}
+.login .login_box .box_inner_header:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 38px;
+	display: inline-block;
+	width: 330px;
+	height: 1px;
+	background-color: rgba(255,255,255,.12);
+}
+
+.login .login_box .box_inner_header > span{
+	position: relative;
+	font-family: 'NanumSquareEB';
+	font-size: 17px;
+	color: #e6eaee;
+	margin-right: 50px;
+}
+.login .login_box .box_inner_header > span:before{
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 0;
+	display: inline-block;
+	width: 17px;
+	height: 1px;
+	background-color: #e03f44;
+}
+.login .login_box .box_inner_header > p{
+	font-family: 'NanumSquareR';
+	font-size: 11px;
+	display: inline-block;
+	color: #aeb3b8;
+    line-height: 15px;
+}
+.login .login_box .box_inner_con dl{
+	display: table;
+	width: 332px;
+	margin-bottom: 20px;
+}
+.login .login_box .box_inner_con dl:nth-child(3){
+	margin-bottom: 25px;
+}
+.login .login_box .box_inner_con dl>dt{
+	display: table-cell;
+	width: 67px;
+	font-family: 'NanumSquareB';
+	text-align: left;
+	font-size: 15px;
+	color: #e6eaee;
+	margin-right: 46px;
+    vertical-align: middle;
+}
+.login .login_box .box_inner_con dl:nth-child(3)>dt{
+	vertical-align: text-bottom;
+}
+.login .login_box .box_inner_con dl>dd{
+	position: relative;
+	text-align: right;
+}
+.login .login_box .box_inner_con dl>dd>input{
+	position: relative;
+	width: 229px;
+	padding: 10px 47px 11px 13px;
+	font-family: 'NanumSquareEB';
+	font-size: 12px;
+	color: #e6eaee;
+	background-color: transparent;
+	background-position: 199px;
+	background-repeat: no-repeat;
+	border: 1px solid #8d9ba6;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.login .login_box .box_inner_con dl>dd>input::placeholder{
+	color: #778996;
+}
+.login_box .confirm{
+    display: table;
+	margin: 0 auto 22px;
+}
+.login .login_box .box_inner_con dl>dd>p{
+	position: relative;
+	width: 229px;
+	height: 48px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+	color: #fff;
+	background-color: rgba(27,32,41,.4);
+	border: 1px solid #1b2029;
+	box-sizing: border-box;
+	margin-left: 35px;
+	background-image: url(../img/00_login_icon_refresh_normal.png);
+	background-position: 198px;
+	background-repeat: no-repeat;
+}
+.login .login_box .box_inner_con dl>dd>p:before{
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: 40px;
+	display: inline-block;
+	width: 1px;
+	height: 36px;
+	background-color: #252e31;
+}
+.login .login_box .box_inner_con dl>dd>p:after{
+	content: '';
+	position: absolute;
+	top: 5px;
+	right: 39px;
+	display: inline-block;
+	width: 1px;
+	height: 36px;
+	background-color: rgba(255,255,255,.08);
+}
+.login .login_box .box_inner_con dl>dd>p:hover{
+	background-image: url(../img/00_login_icon_refresh_hover.png);
+}
+.login .login_box .box_inner_con dl>dd>.error{
+    position: absolute;
+    left: 39px;
+    bottom: -16px;
+	font-family: 'NanumSquareR';
+	font-size: 9px;
+	color: #d41951;
+	display: inline-block;
+}
+.login .login_box .box_inner_con dl>dd:after{
+	content: '';
+	position: absolute;
+	top: 12px;
+	right: 38px;
+	display: inline-block;
+	width: 1px;
+	height: 12px;
+	background-color: #8694a6;
+}
+.login .login_box .box_inner_con dl:nth-child(3)>dd:after{
+	display: none;
+}
+.login .login_box .box_inner_con dl>dd>input#id{
+	background-image: url(../img/00_login_icon_id.png);
+}
+.login .login_box .box_inner_con dl>dd>input#pw{
+	background-image: url(../img/00_login_icon_pw.png);
+}
+.login .login_box .box_inner_con dl>dd>input#security{
+	border: none;
+	border-bottom: 1px solid #686d73;
+	padding: 0 0 7px 4px;
+	margin-bottom: 8px;
+	letter-spacing: 0.5px;
+	border-radius: 0;
+}
+.membership{
+	font-family: 'NanumSquareR';
+	font-size: 11px;
+    line-height: 11px;
+	color: #aeb3b8;
+	background: url(../img/00_login_icon_exclamation_mark.png) no-repeat;
+	padding: 1px 0 0 17px;
+	margin-bottom: 9px;
+}
+.membership strong{
+	position: relative;
+	float: right;
+}
+.membership strong:before{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: -7px;
+	display: inline-block;
+	width: 1px;
+	height: 10px;
+	background-color: #75787d;
+}
+.membership strong button{
+	font-family: 'NanumSquareB';
+	font-size: 13px;
+	color: #e6eaee;
+	letter-spacing: 1px;
+    padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.login .login_box .box_inner_footer>a{
+	width: 330px;
+	font-family: 'NanumSquareEB';
+	font-size: 17px;
+	line-height: 17px;
+	color: #e6eaee;
+	display: block;
+	padding: 13px 0 12px;
+	background-color: #e03f44;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.login .login_box .box_inner_footer>a:hover{
+	background-color: #c7383c;
+}
+.login .login_box .box_inner_footer>a:active{
+	background-color: #ad3135;
+}
+
+/*  회원가입 팝업  */
+#join_modal .modal-dialog{
+	max-width: 660px;
+    margin: 171px auto 0;
+}
+#join_modal .modal-content{
+	background-color: transparent;
+    background-image: url(../img/bg_singup.png);
+    background-repeat: no-repeat;
+}
+#join_modal .modal-header{
+	position: relative;
+    padding: 15px 0 15px 36px;
+	border-bottom: none;
+}
+#join_modal .modal-header:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 38px;
+	display: inline-block;
+	width: 584px;
+	height: 1px;
+	background-color: rgba(255,255,255,.12);
+}
+#join_modal .modal-body{
+	position: relative;
+	margin: 25px 38px 25px;
+    padding: 0;
+	border-top: 0;
+}
+#join_modal label{
+	font-family: 'NanumSquareB';
+	font-size: 13px;
+	color: #e6eaee;
+	letter-spacing: 1px;
+	vertical-align: -webkit-baseline-middle;
+}
+
+#join_modal .modal-title{
+    position: relative;
+    font-family: 'NanumSquareB';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e6eaee;
+	padding-top: 22px;
+    padding-bottom: 6px;
+}
+#join_modal .modal-title:before{
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 0;
+	display: inline-block;
+	width: 17px;
+	height: 1px;
+	background-color: #e03f44;
+}
+
+#join_modal dl{
+	display: table;
+	width: 583px;
+	margin-bottom: 20px;
+}
+#join_modal dl>dt{
+	position: relative;
+	display: table-cell;
+	width: 100px;
+	font-family: 'NanumSquareB';
+	text-align: left;
+	font-size: 17px;
+	color: #e6eaee;
+	margin-right: 46px;
+    vertical-align: middle;
+}
+#join_modal .astro{
+    position: absolute;
+    left: -13px;
+    color: #e03f44;
+    display: inline-block;
+}
+#join_modal dl>dd{
+	position: relative;
+	text-align: right;
+}
+#join_modal dl>dd input{
+	position: relative;
+	width: 483px;
+	padding: 10px 47px 11px 13px;
+	font-family: 'NanumSquareEB';
+	font-size: 12px;
+	color: #e6eaee;
+	letter-spacing: 0.5px;
+	background-color: transparent;
+	background-position: 199px;
+	background-repeat: no-repeat;
+	border: 1px solid #8d9ba6;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+#join_modal input::placeholder{
+	color: #778996;
+}
+#join_modal .id_group{
+	position: relative;
+}
+#join_modal .id_group .input-group-append{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#join_modal .address .input-group{
+	margin-bottom: 10px;
+}
+#join_modal select{
+	background-color: transparent;
+	border: 1px solid #8d9ba6;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 10px 47px 9px 13px;
+	font-family: 'NanumSquareEB';
+	font-size: 12px;
+	color: #e6eaee;
+}
+#join_modal .email>dd>input, #join_modal .email>dd>select, #join_modal .tel>dd>input, #join_modal .tel>dd>select, #join_modal .group>dd>select{
+	float: left;
+	width: 150px;
+}
+#join_modal .tel .at{
+    float: left;
+    font-family: 'NanumSquareR';
+    font-size: 13px;
+    line-height: 34px;
+    color: #898e93;
+    padding: 0 5px;
+}
+#join_modal .email .at{
+    float: left;
+    font-family: 'NanumSquareR';
+    font-size: 13px;
+    line-height: 34px;
+    color: #898e93;
+    padding: 0 2px;
+}
+#join_modal .email select {
+    margin-left: 15px;
+}
+#join_modal .group{
+	margin-bottom: 0;
+}
+#join_modal #orga{
+	margin-right: 79px;
+}
+#join_modal .error{
+    position: absolute;
+    left: 16px;
+    bottom: -18px;
+    font-family: 'NanumSquareR';
+    font-size: 9px;
+    color: #d41951;
+    display: inline-block;
+}
+#join_modal .input-group-append button{
+	position: relative;
+	font-family: 'NanumSquareB';
+	font-size: 11px;
+	background-color: transparent;
+	border: none;
+	color: #e6edf2;
+    padding: 10px 12px 10px 11px;
+    letter-spacing: 1px;
+}
+#join_modal .input-group-append button:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 12px;
+	left: 0;
+	width: 1px;
+	height: 12px;
+	background-color: #676c73;
+}
+#join_modal .caution{
+	position: absolute;
+	left: 100px;
+    bottom: -19px;
+	font-family: 'NanumSquareR';
+	font-size: 12px;
+	line-height: 12px;
+	color: #9a2c30;
+	letter-spacing: 0.5px;
+	padding-left: 17px;
+	background: url(../img/00_login_icon_exclamation_mark_red.png) no-repeat;
+}
+#join_modal .btn_join{
+	width: 584px;
+    height: 42px;
+    font-family: 'NanumSquareB';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e6eaee;
+    background-color: #e03f44;
+    border: 0;
+    padding: 11px 41px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+#join_modal .btn_join:hover{
+	background-color: #c73439;
+}
+#join_modal .btn_join:active{
+	background-color: #ad3135;
+}
+#join_modal .modal-footer{
+	position: relative;
+	display: block;
+	padding: 15px 36px 24px;
+    border-top: 1px solid #475161;
+}
+#join_modal .modal-footer:before{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0,0,0,.22);
+
+}
+#join_modal .btn_cancle{
+	font-family: 'NanumSquareB';
+    font-size: 17px;
+    line-height: 17px;
+    color: #e6eaee;
+	width: 584px;
+	height: 42px;
+    padding: 11px 41px;
+    background-color: #202830;
+    border-radius: 4px;
+}
+#join_modal .btn_cancle:hover, #join_modal .btn_cancle:active{
+	background-color: #1b2229;
+}
+
+/* 로그인 추가 */
+.box_inner_con .auth_code{
+	position: relative;
+	padding: 22px 0 9px;
+}
+.box_inner_con .auth_code:after{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgba(255,255,255,.12);
+}
+.box_inner_con .auth_code dl{
+	margin-bottom: 14px;
+}
+.login .login_box .box_inner_con .auth_code dl>dt{
+	width: auto;
+}
+.login .login_box .box_inner_con .auth_code dl>dd:after{
+	content: '';
+    position: absolute;
+    top: 12px;
+    right: 59px;
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #676c73;
+}
+.box_inner_con dl>dd>.input-group{
+	float: right;
+	width: 229px;
+	height: 36px;
+	border: 1px solid #686d73;
+	border-radius: 4px;
+}
+.box_inner_con label{
+	margin-bottom: 0;
+}
+.box_inner_con dl>dd .form-control{
+	position: relative;
+	font-size: 11px;
+    color: #e6eaee;
+	letter-spacing: 0.5px;
+	padding: 9px 13px;
+    background-color: transparent;
+	border: none;
+}
+.box_inner_con dl>dd .form-control:focus{
+	box-shadow: none;
+}
+.box_inner_con dl>dd .input-group-text{
+	font-family: 'NanumSquareR';
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	color: #ff383f;
+	background-color: transparent;
+	border: none;
+}
+.box_inner_con .auth_code p{
+	font-family: 'NanumSquareB';
+	font-size: 13px;
+	line-height: 13px;
+	color: #acb6bf;
+	letter-spacing: 0.5px;
+	padding-bottom: 18px;
+}
+.box_inner_con .auth_code .info{
+	font-family: 'NanumSquareR';
+	font-size: 11px;
+	line-height: 11px;
+	letter-spacing: 0.5px;
+	padding-bottom: 5px;
+}
+.box_inner_footer .btn_box{
+	width: 330px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.box_inner_footer button{
+	float: left;
+	font-family: 'NanumSquareEB';
+	font-size: 17px;
+	line-height: 17px;
+    color: #e6eaee;
+    display: block;
+	padding: 12px 0 11px;
+	border-radius: 4px;
+	border: none;
+}
+.box_inner_footer .btn_re{
+	width: 204px;
+	margin-right: 10px;
+	background-color: #4a505c;
+}
+.box_inner_footer .btn_re:hover{
+	background-color: #3d424f;
+	color: #e6eaee;
+}
+.box_inner_footer .btn_confirm{
+	width: 116px;
+	background-color: #e03f44;
+}
+.box_inner_footer .btn_confirm:hover{
+	background-color: #c7383c;
+	color: #e6eaee;
+}
+
+/* 로그인 팝업 공통 스타일 */
+.pop_style .modal-body{
+    padding: 50px 38px 40px 193px;
+}
+.pop_style .content{
+	color: #e5f1ff;
+}
+.pop_style .content strong{
+	color: #e0284d;
+}
+.pop_style .btn_confirm{
+	width: 84px;
+	height: 32px;
+	line-height: 32px;
+	background-color: #2f4761;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 2px;
+}
+.pop_style .btn_confirm:hover{
+	background-color: #253c54;
+}
+
+/* 로그인 실패 팝업 */
+#login_fail_modal .modal-body{
+	background-image: url(../img/popup/00_login_icon_fail.png);
+}
+
+/* 인증 실패 (인증번호 재입력) 팝업 */
+#certi_code_modal .modal-body, #certi_fail_modal .modal-body{
+	background-image: url(../img/popup/00_login_icon_OTP_fail.png);
+}
+
+/* 로그아웃 확인 팝업 */
+#logout_modal .modal-body{
+	background-image: url(../img/popup/00_logout_icon_confirm.png);
+	padding: 65px 38px 55px 193px;
+}
+#logout_modal .modal-footer button{
+	width: 84px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 2px;
+}
+#logout_modal .btn_confirm{
+	background-color: #e03f44;
+	margin-right: 12px;
+}
+#logout_modal .btn_confirm:hover{
+	background-color: #c7383c;
+}
+#logout_modal .btn_cancle{
+	background-color: #2f4761;
+}
+#logout_modal .btn_cancle:hover{
+	background-color: #253c54;
+}
+
+/* 로그아웃 완료 팝업 */
+#logout_com_modal .modal-body{
+	background-image: url(../img/popup/00_logout_icon_complete.png);
+	padding: 65px 38px 55px 193px;
+}
+
+/* 계정등록 완료 핍압 */
+#accout_com_modal .modal-body{
+	background-image: url(../img/popup/00_signup_icon_sucess.png);
+	padding: 65px 38px 55px 193px;
+}
+#accout_com_modal .content strong{
+	color: #287be0;
+}
+
+/* 계정 등록 실패 팝업 */
+#accout_fail_modal .modal-body{
+	background-image: url(../img/popup/00_signup_icon_fail.png);
+	padding: 65px 38px 55px 193px;
+}

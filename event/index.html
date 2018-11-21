@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="KT" />
+	<meta name="description" content="KT" />
+	<title>GiGA Safe SOC</title>
+	<link rel="stylesheet" href="../common/css/common.css" type="text/css">
+	<link rel="stylesheet" href="./css/style.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/bootstrap/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jquery.mCustomScrollbar.css" type="text/css">
+	<link rel="stylesheet" href="../common/css/jstree/style.min.css" type="text/css">
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/popper.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<script src="../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../common/js/marquee/jquery.marquee.min.js"></script>
+	<script src="../common/js/highcharts/highcharts.js"></script>
+	<script src="../common/js/jstree/jstree.min.js"></script>
+	<script src="./js/event.js"></script>
+	<script src="../common/js/main.js"></script>
+</head>
+<body class="body">
+	<div id="wrap">
+		<header id="header">
+			<h1 class="logo">
+				<img src="../common/img/00_logo.png" alt="KT GIGA Safe SOC 로고 이미지">
+			</h1>
+			<h2 class="service_nm">포항시지진재난관리국</h2>
+			<div class="alert alert-dismissible fade show noti_alert" role="alert">
+				<span class="emergency">긴급</span>
+			  	[관리자] 금일 오후 4시 컨퍼런스 미팅 장소가 변경되었음을 알립니다.
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="func">
+				<a class="btn_admin" data-toggle="modal" data-target="#chg_admin_modal"></a>
+				<a class="btn_disaster_mode" data-toggle="modal" data-target="#mode_modal"></a>
+				<div class="alarm">
+					<a href="#" class="alarm_popover">
+						<img src="../common/img/00_GNB_icon_alram.png" alt="알람 아이콘 이미지">
+						<span class="badge badge-danger alarm_badge">14</span>
+					</a>
+				</div>
+				<div id="popover_content">
+					<table class="eve_alarm_table">
+						<colgroup>
+							<col style="width:60px" />
+							<col style="width:75px" />
+							<col style="width:35px" />
+							<col style="width:50px" />
+							<col style="width:80px" />
+							<col style="width:35px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>시설물 명</th>
+								<th>이벤트 명</th>
+								<th>등급</th>
+								<th>발생 위치</th>
+								<th>발생일시</th>
+								<th>상태</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="table_box">
+						<table class="eve_alarm_table">
+							<colgroup>
+								<col style="width:60px" />
+								<col style="width:75px" />
+								<col style="width:35px" />
+								<col style="width:50px" />
+								<col style="width:80px" />
+								<col style="width:35px" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+								<tr>
+									<td>화태대교</td>
+									<td>가속도 임계</td>
+									<td>경계</td>
+									<td>A-03</td>
+									<td>2018/04/23</td>
+									<td>발생</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="user">
+					<span class="user_id">KT admin</span>
+					<a class="user_state">Logout</a>
+				</div>
+			</div>
+		</header>
+		<section id="container">
+			<div class="menu">
+				<span class="menu_tit">Dashboard</span>
+				<div id="gnb">
+					<ul>
+						<li class="stats_mor">
+							<a href="../statistics/index.html">통계 모니터링</a>
+						</li>
+						<li class="rt_mor">
+							<a href="../realtime/index.html">실시간 모니터링</a>
+						</li>
+						<li class="fa_info">
+							<a href="../facility/index.html">시설물 정보</a>
+						</li>
+						<li class="eve_info active">
+							<a href="#">이벤트 정보</a>
+						</li>
+						<li class="chk_info">
+							<a href="../check/index.html">점검 정보</a>
+						</li>
+						<li class="sms_info">
+							<a href="../sms/index.html">SMS 정보</a>
+						</li>
+						<li class="voc_info">
+							<a href="../voc/index.html">VOC 정보</a>
+						</li>
+						<li class="noti">
+							<a href="../notice/index.html">공지사항</a>
+						</li>
+						<li class="menual last_list">
+							<a href="#">매뉴얼</a>
+						</li>
+					</ul>
+				</div>
+				<button class="show_hide_arrow"></button>
+			</div>
+			<div class="content_wrap">
+				<div class="left_side_wrap">
+					<div class="event_history">
+						<span class="con_tit">이벤트 및 장애 내역</span>	
+						<table class="event_table">
+							<colgroup>
+								<col style="width:6px"/>
+								<col style="width:102px"/>
+								<col style="width:86px"/>
+								<col style="width:55px"/>
+								<col style="width:98px"/>
+								<col style="width:92px"/>
+								<col style="width:55px"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th></th>
+									<th>시설물 명</th>
+									<th>이벤트 명</th>
+									<th>등급</th>
+									<th>센서 종류</th>
+									<th>발생 일시</th>
+									<th>상태</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="table_box mCustomScrollbar">
+							<table class="event_table">
+								<colgroup>
+									<col style="width:6px"/>
+									<col style="width:102px"/>
+									<col style="width:86px"/>
+									<col style="width:55px"/>
+									<col style="width:98px"/>
+									<col style="width:92px"/>
+									<col style="width:55px"/>
+								</colgroup>
+								<tbody>
+									<tr>
+										<td>
+											<div class="point_bar"></div>
+										</td>
+										<td>화태대교화태대교화태대교</td>
+										<td>임계치 초과</td>
+										<td>경계</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>종료</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="point_bar"></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="point_bar"></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+									<tr>
+										<td>
+											<div></div>
+										</td>
+										<td>강유교</td>
+										<td>임계치 초과</td>
+										<td>심각</td>
+										<td>광1축 가속도</td>
+										<td>2018/05/23</td>
+										<td>발생</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div> <!-- 이벤트 및 장애 내역 -->
+					<div class="map_wrap">
+						<div class="map_header">
+							<p class="map_location">경상북도 > 포항시 > 남구 > 해도동</p>
+							<button class="btn_show_list"></button>
+						</div>
+						<div class="map">
+							<div class="legend">
+								<ul>
+									<li class="icon_bridge">교량</li>
+									<li class="icon_parking">주차장</li>
+									<li class="icon_tunnel">터널</li>
+									<li class="icon_cons">공사장</li>
+									<li class="icon_school">학교</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="center_wrap">
+					<div class="info_wrap">
+						<div class="info_fa">
+							<div class="hd">
+								<span class="con_tit">시설물 &amp; 센서 정보</span>
+							</div>
+							<div class="info_fa_con">
+								<span class="fa_txt">시설물</span>
+								<span class="fa_name">영일도서관</span>
+								<p class="fa_loca">경상북도 포항시 남구 해도동 231-1</p>
+								<dl class="info_fa_list">
+									<!-- <dt>위치</dt>
+									<dd class="txt_style">포항시 남구 해도동포항시 남구 해도동 해도동포항시 남구 해도동</dd> -->
+									<dt>센서 종류</dt>
+									<dd>광1축 가속도 센서</dd>
+									<dt>센서 ID</dt>
+									<dd>DKNY_PP4982</dd>
+									<dt>센서 위치</dt>
+									<dd>A-03</dd>
+								</dl>
+							</div>
+						</div> <!-- 시설물 & 센서 정보 -->
+						<div class="info_event">
+							<div class="hd">
+								<span class="con_tit">이벤트 정보</span>
+							</div>
+							<div class="info_event_con">
+								<button class="btn_on_off">
+									<img src="./img/04_event_button_on.png" class="on" alt="이벤트 on/off 기능 버튼">
+								</button>
+								<span class="eve_name">균열 가속도계_초과 이벤트 발생</span>
+								<p class="eve_day">2018-06-20 19:55:43</p>
+								<dl class="info_event_list">
+									<dt>이벤트 유형</dt>
+									<dd>임계치 초과</dd>
+									<dt>발생 위치</dt>
+									<dd>A-03</dd>
+									<dt>단계</dt>
+									<dd class="color_point">Lv 4 심각</dd>
+								</dl>
+								<button class="btn_end" data-toggle="modal" data-target="#handling_modal">이벤트 종료</button>
+							</div>
+						</div> <!-- 이벤트 정보 -->
+					</div>
+					<div class="event_location">
+						<span class="con_tit">이벤트 발생 위치</span>
+						<div class="plans_box">
+							<div class="plans_type">
+								<span>Top View</span>
+							</div>
+							<div class="plans_img">
+								<button class="left_arrow"></button>
+								<!-- <img src="" alt=""> --> <!-- 이미지 추후 추가 -->
+								<button class="right_arrow"></button>
+							</div>
+						</div>
+					</div> <!-- 이벤트 발생 위치 -->
+				</div>
+				<div class="right_side_wrap">
+					<div class="send_sms">
+						<div class="send_sms_con">
+							<div class="sms_who">
+								<span class="con_tit">발송 대상</span>
+								<div class="jstree_box mCustomScrollbar">
+									<div id="jstree">
+										<ul>
+									      <li>Root node 1
+									        <ul>
+									          <li>Child node 1</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									          <li>Child node 2</li>
+									        </ul>
+									      </li>
+									      <li>Root node 2</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+							<div class="sms_content">
+								<span class="con_tit">발송 내용</span>
+								<textarea rows="6" cols="30"></textarea>
+							</div>
+						</div>
+						<div class="send_sms_footer">
+							<button class="btn_send">전송</button>
+							<button class="btn_close">닫기</button>
+						</div>
+					</div> <!-- SMS 발송 대상 & 내용 -->
+					<div class="sms_history">
+						<span class="con_tit">SMS 전송 내역</span>	
+						<table class="sms_table">
+							<colgroup>
+								<col style="width:78px"/>
+								<col style="width:56px"/>
+								<col style="width:100px"/>
+								<col style="width:260px"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<th>발송 유형</th>
+									<th>등급</th>
+									<th>발송 일자</th>
+									<th>내용</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="table_box mCustomScrollbar">
+							<table class="sms_table">
+								<colgroup>
+									<col style="width:78px"/>
+									<col style="width:56px"/>
+									<col style="width:100px"/>
+									<col style="width:260px"/>
+								</colgroup>
+								<tbody>
+									<tr>
+										<td>자동</td>
+										<td>경계</td>
+										<td>2018/07/11</td>
+										<td>영운초등학교 균열 발생</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>심각</td>
+										<td>2018/07/11</td>
+										<td>영주대교 균열 감지</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>경계</td>
+										<td>2018/07/11</td>
+										<td>영운초등학교 균열 발생</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>심각</td>
+										<td>2018/07/11</td>
+										<td>영주대교 균열 감지</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>경계</td>
+										<td>2018/07/11</td>
+										<td>영운초등학교 균열 발생</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>심각</td>
+										<td>2018/07/11</td>
+										<td>영주대교 균열 감지</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>경계</td>
+										<td>2018/07/11</td>
+										<td>영운초등학교 균열 발생</td>
+									</tr>
+									<tr>
+										<td>자동</td>
+										<td>심각</td>
+										<td>2018/07/11</td>
+										<td>영주대교 균열 감지</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div> <!-- SMS 전송 내역 -->
+					<div class="event_measuring">
+						<span class="con_tit">이벤트 발전 전후 계측 데이터</span>
+						<div class="graph" id="event_measuring_graph"></div>
+					</div> <!-- 이벤트 발전 전후 계측 데이터 -->
+				</div>
+			</div>
+			<div class="modal fade" id="handling_modal">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-body">
+							<div class="top_area">
+								<span class="event_tit">임계치 초과 이벤트_<strong>처리 완료</strong></span>
+							</div>
+							<div class="event_info_wrap">
+								<div class="event_info">
+									<span class="sub_tit">이벤트 발생 정보</span>
+									<dl>
+										<dt>시설물 명</dt>
+										<dd>태화대교</dd>
+									</dl>										
+									<dl>
+										<dt>시설물 유형</dt>
+										<dd>교량</dd>
+									</dl>
+									<dl>
+										<dt>발생 위치</dt>
+										<dd>A-03</dd>
+									</dl>
+									<dl>
+										<dt>발생 일시</dt>
+										<dd>2018-10-23 11:06:34</dd>
+									</dl>
+									<dl>
+										<dt>이벤트 유형</dt>
+										<dd>임계치 초과</dd>
+									</dl>
+									<dl>
+										<dt>센서 유형</dt>
+										<dd>무선</dd>
+									</dl>
+									<dl>
+										<dt>센서 종류</dt>
+										<dd>변형률계</dd>
+									</dl>
+								</div>
+								<div class="event_loca">
+									<span class="sub_tit">이벤트 발생 위치</span>
+									<div class="plans_box">
+										<div class="plans_type">
+											<span>정면</span>
+										</div>
+										<div class="plans_img">
+											<button class="left_arrow"></button>
+											<!-- <img src="" alt=""> --> <!-- 이미지 추후 추가 -->
+											<button class="right_arrow"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="action_area">
+								<div class="cons">
+									<div id="sms" class="tab_con">
+										<div class="sms_wrap">
+											<div class="sms_to_wrap">
+												<span class="sub_tit">SMS 발송 대상</span>
+												<div class="sms_to mCustomScrollbar">
+													<div id="modal_jstree">
+														<ul>
+													      <li>Root node 1
+													        <ul>
+													          <li>Child node 1</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													          <li>Child node 2</li>
+													        </ul>
+													      </li>
+													      <li>Root node 2</li>
+													    </ul>
+													</div>
+												</div>
+											</div>
+											<div class="sms_con_wrap">
+												<span class="sub_tit">발송 내용</span>
+												<div class="sms_con">
+													<textarea class="" name="comment" rows="11" cols="50"></textarea>
+												</div>
+											</div>
+										</div>
+									</div> <!-- 1. SMS 전송 -->
+								</div>
+							</div>
+			      		</div>
+					    <div class="modal-footer">
+					        <button type="button" class="btn_eve_com" data-toggle="modal">처리 완료</button>
+					        <button type="button" class="btn_pop_cancle closeModal" data-dismiss="modal">닫기</button>
+					    </div> 
+			    	</div>
+			 	</div>
+			</div> <!-- Modal -->
+		</section>
+		<footer id="footer" class="marquee">
+			<p>[KBS2] 포항시 남구 연일읍 연일대교, 섬안큰다리 등 지진으로 피해 심각 지역 주민 피난 경보 발령</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+			<p>[데일리뉴스] 포항시 지진 피해 심각 지역 공공기관 일제히 가동불가로 인한 2차 피해 촉발</p>
+			<p>[조선일보] 주민 대피에 혼선이 잇따라 추가 피해 확산 우려</p>
+		</footer>
+	</div>
+</body>
+</html>

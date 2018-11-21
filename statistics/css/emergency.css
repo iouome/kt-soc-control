@@ -1,0 +1,622 @@
+/*  Emergency  */
+.emergency_header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 63px;
+	background: url(../../common/img/emergency/09_alram_img_bg_emergency.png) no-repeat;
+}
+.emergency_tit{
+	display: block;
+    width: 243px;
+	font-family: 'NanumSquareEB';
+	font-size: 24px;
+	line-height: 63px;
+	color: #fff;
+	letter-spacing: 0.5px;
+    margin: 0 auto;
+    padding-left: 48px;
+    background: url(../../common/img/emergency/09_alram_icon_siren_emergency.png) no-repeat 0 14px;
+}
+.emergency_control{
+	position: absolute;
+    right: 96px;
+    top: 23px;
+	overflow: hidden;
+}
+.emergency_control li{
+	float: left;
+	padding: 0 20px;
+}
+.emergency_control button{
+	position: relative;
+	font-family: 'NanumSquareEB';
+	font-size: 17px;
+	color: #fff0f0;
+	letter-spacing: 1px;
+}
+.emergency_control .btn_eve_confirm:before{
+	content: '';
+	position: absolute;
+	right: -20px;
+	top: 0;
+	width: 1px;
+	height: 21px;
+	background-color: rgba(0,0,0,.2);
+}
+.emergency_control .btn_eve_confirm:after{
+	content: '';
+	position: absolute;
+	right: -21px;
+	top: 0;
+	width: 1px;
+	height: 21px;
+	background-color: rgba(255,255,255,.4);
+}
+
+/*  이벤트 팝업  */
+#event_modal .modal-dialog, #event_bigdata_modal .modal-dialog{
+	max-width:1040px;
+    margin: 185px auto 0;    
+}
+#manual_modal .modal-dialog{
+	max-width:792px;
+    margin: 62px auto 0;    
+}
+#event_modal .modal-content, #event_bigdata_modal .modal-content{
+	background-color: transparent;
+}
+#manual_modal .modal-content{
+	border: 2px solid #0d223b;
+}
+#event_modal .modal-header, #event_bigdata_modal .modal-header{
+	position: relative;
+    width: 1036px;
+	background-color: rgba(102,7,4,.9);
+	border-bottom: 2px solid #450706;
+	padding: 13px 35px 12px;
+	margin: 0 auto;
+    box-sizing: border-box;
+    
+}
+#manual_modal .modal-header{
+	position: relative;
+	background-color: #0d1c2e;
+	border-bottom: 1px solid #1a3352 ;
+	padding: 39px 58px 16px;
+    border-radius: 0;
+}
+#event_modal .modal-body, #event_bigdata_modal .modal-body{
+	background-color: #0d1c2e; 
+	padding: 37px 0 0 0;
+	border-top: 2px solid #0d223b;
+	border-left: 2px solid #0d223b;
+	border-right: 2px solid #0d223b;
+}
+#manual_modal .modal-body{
+	background-color: #0d1c2e; 
+	padding: 24px 0;
+}
+#event_modal .modal-footer, #event_bigdata_modal .modal-footer{
+	background-color: #0d1c2e; 
+	padding: 24px 52px;
+	border-top: 1px solid #1a3352;
+	border-bottom: 2px solid #0d223b;
+	border-left: 2px solid #0d223b;
+	border-right: 2px solid #0d223b;
+}
+#manual_modal .modal-footer{
+	background-color: #0d1c2e; 
+	padding: 24px 52px;
+	border-top: 1px solid #1a3352;
+}
+#event_modal .modal-title, #event_bigdata_modal .modal-title{
+	display: inline-block;
+	margin: 0 auto;
+	font-size: 17px;
+	line-height: 16px;
+	color: #e0c5c5;
+	letter-spacing: 0.5px;
+	background: url(../../common/img/emergency/09_alram_icon_siren_header.png) no-repeat;
+	padding-left: 22px;
+    padding-top: 1px;
+}
+#manual_modal .modal-title{
+	font-family: 'NanumSquareR';
+	font-size: 22px;
+	line-height: 22px;
+	color: #fff;
+	letter-spacing: 0.5px;
+	background: none;
+}
+.emergency .top_area{
+	overflow: hidden;
+	padding: 0 58px 0 82px;
+	margin-bottom: 16px;
+}
+.emergency .event_tit{
+	float: left;
+	font-family: 'NanumSquareR';
+	font-size: 22px;
+	line-height: 22px;
+	letter-spacing: 0.5px;
+	color: #fff;
+}
+.emergency .event_day{
+	float: right;
+	position: relative;
+	font-size: 12px;
+	line-height: 12px;
+	color: #4c5f75;
+	letter-spacing: 0.5px;
+    padding: 5px 0px;
+}
+.emergency .event_day:before{
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: -10px;
+	display: inline-block;
+	width: 1px;
+	height: 10px;
+	background-color: #4c5f75;
+}
+.emergency .event_day span{
+	float: left;
+}
+.emergency .event_day span:first-child{
+	padding-right: 9px;
+}
+.emergency .event_info_wrap{
+	width: 900px;
+    padding: 0 56px 0 82px;
+    margin-bottom: 33px;
+	overflow: hidden;
+}
+.emergency .event_info{
+	float: left;
+	width: 274px;
+	margin-right: 36px;
+    padding-top: 15px;
+	border-top: 1px solid #1a3352;
+}
+.emergency .event_loca{
+	float: left;
+	width: 590px;
+	padding-top: 15px;
+	border-top: 1px solid #1a3352;
+}
+.emergency .sub_tit{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 14px;
+	color: #849fc4;
+	letter-spacing: 0.5px;
+}
+.emergency .event_info .sub_tit{
+	margin-bottom: 10px;
+}
+.emergency .event_info dl{
+	font-family: 'NanumSquareR';
+	font-size: 14px;
+    line-height: 23px;
+	letter-spacing: 0.5px;
+	overflow: hidden;
+}
+.emergency .event_info dt{
+	float: left;
+	width: 124px;
+	color: #4c6380;
+}
+.emergency .event_info dd{
+	float: left;
+	color: #dde4ed;
+	letter-spacing: 1px;
+}
+.emergency .event_loca .sub_tit{
+	margin-bottom: 7px;
+}
+.emergency .modal-dialog .plans_box{
+	width: 100%;
+	height: 200px;
+	border: 1px solid #142b47;
+	box-sizing: border-box;
+}
+.emergency .plans_type{
+	width: 100%;
+	height: 20px;
+	background-color: #112742;
+	text-align: center;
+	border-bottom: 1px solid #142b47;
+}
+.emergency .plans_type span{
+	font-size: 12px;
+	color: #4c6380;
+	letter-spacing: 1px;
+    line-height: 20px;
+}
+.emergency .plans_img{
+	padding: 10px 6px 9px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.emergency .plans_img button {
+    float: left;
+    display: inline-block;
+    width: 24px;
+    height: 100px;
+    margin-top: 30px;
+}
+.emergency .plans_img > img{
+	display: block;
+	width: 527px;
+	height: 160px; 
+}
+.emergency .plans_img .left_arrow {
+	float: left;
+    background: url(../../common/img/emergency/09_alram_arrow_slide_left_normal.png) no-repeat;
+}
+.emergency .plans_img .right_arrow {
+	float: right;
+    background: url(../../common/img/emergency/09_alram_arrow_slide_right_normal.png) no-repeat;
+}
+.emergency .action_area{
+	position: relative;
+	padding: 0 56px;
+}
+.emergency .action_area:after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: #1a3352;
+}
+.emergency .action_area .tab{
+	overflow: hidden;
+}
+.emergency .action_area .tab li{
+	float: left;
+}
+.emergency .action_area .tab .active{
+	color: #de2016;
+}
+.emergency .action_area .tab .active:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #de2016;
+    z-index: 1;
+}
+.emergency .action_area .tab li a{
+	position: relative;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	color: #c5d1e0;
+	letter-spacing: 0.5px;
+	padding: 8px 20px 9px;
+}
+.emergency .action_area .cons{
+	height: 273px;
+	padding-left: 22px;
+}
+.emergency .sms_wrap{
+	overflow: hidden;
+	padding-top: 16px;
+}
+.emergency .sms_wrap .sub_tit{
+	margin-bottom: 6px;
+}
+.emergency .sms_to_wrap{
+	float: left;
+	width: 274px;
+	margin-right: 36px;
+}
+.emergency .sms_con_wrap{
+	float: left;
+	width: 590px;
+}
+.emergency .sms_to{
+	height: 166px;
+	background-color: #122338;
+	border: 1px solid #142b47;
+    padding: 16px 0 16px 24px;
+}
+.emergency .sms_con textarea{
+	width: 590px;
+	height: 200px;
+	background-color: #122338;
+	padding: 19px 26px;
+	border: 1px solid #142b47;
+	font-family: 'NanumSquareR';
+	font-size: 14px;
+	line-height: 23px;
+	color: #d4dbe4;
+	letter-spacing: 0.5px;
+	resize: none;
+	box-sizing: border-box;
+}
+.emergency .sms_con textarea:focus{
+	border: 1px solid #2c64a8;
+}
+
+#graph, #graph_con{
+	padding-top: 36px;
+	height: 200px;
+}
+.highcharts-grid-line{
+	stroke: #072b45;
+}
+.highcharts-axis-line{
+	stroke: #072b45;
+	stroke-width: 2;
+}
+.highcharts-axis-labels{
+	color: #315b7d;
+}
+.highcharts-tick{
+	display: none;
+}
+
+#manual, #manual_con{
+	padding-top: 26px;
+}
+.manual_wrap{
+	height: 221px;
+	background-color: #122338;
+	border: 1px solid #142b47;
+	box-sizing: border-box;
+}
+.manual_con{
+	width: 867px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 9px 0 10px;
+}
+.modal-footer.emergency button{
+	width: auto;
+	height: auto;
+	font-size: 15px;
+	line-height: 15px;
+	color: #e6eaee;
+	padding: 9px 35px 10px;
+	margin: 0 6px;
+	border-radius: 2px;
+	letter-spacing: 0.25px;
+}
+.emergency .btn_action{
+	background-color: #b81e16;
+}
+.emergency .btn_action:hover{
+	background-color: #9e120b;
+}
+.emergency .btn_action:active{
+	background-color: #851c17;
+}
+.emergency .btn_cancle{
+	background-color: #354454;
+}
+.emergency .btn_cancle:hover{
+	background-color: #293747;
+}
+.emergency .btn_cancle:active{
+	background-color: #252f3b;
+}
+
+/*  대응 메뉴얼 팝업  */
+.page_info{
+	float: right;
+	font-size: 12px;
+	line-height: 12px;
+	color: #4c5f75;
+    padding-top: 5px;
+}
+.page_info .cur_page{
+	color: #93a8c2;
+}
+#manual_modal .manual_box{
+	width: 676px;
+	height: 746px;
+	margin: 0 auto;
+	background-color: #122338;
+	border: 1px solid #142b47;
+}
+#manual_modal .manual{
+	width: 655px;
+	height: 726px;
+	margin: 10px 0 10px 10px;
+	border: 1px solid #142b47;
+}
+
+.sms_wrap .mCSB_scrollTools, .manual .mCSB_scrollTools{
+	width: 11px;
+}
+.sms_wrap .mCSB_scrollTools .mCSB_draggerContainer, .manual .mCSB_scrollTools .mCSB_draggerContainer{
+    top: -12px;
+    background-color: #0d1c2e;
+}
+.sms_wrap .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .manual .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    width: 9px;
+    border-radius: 0;
+    background-color: #324862;
+}
+.sms_wrap .mCSB_scrollTools .mCSB_draggerRail, .manual .mCSB_scrollTools .mCSB_draggerRail{
+    display: none;
+}
+
+/* bigData */
+.bigdata_box{
+	width: 590px;
+	height: 200px;
+	padding: 11px 32px 15px 32px;
+	border: 1px solid #142b47;
+	box-sizing: border-box;
+}
+.tit_area{
+	width: 284px;
+	overflow: hidden;
+}
+.btn_magn{
+	float: right;
+	font-size: 10px;
+	color: #e6eaee;
+	width: 46px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	background-color: #1272e0;
+	border-radius: 2px;
+}
+.btn_magn:hover{
+	background-color: #1065c7;
+}
+.bigdata_tit{
+	float: left;
+	display: inline-block; 
+	font-size: 14px;
+	line-height: 14px;
+	color: #fff;
+	letter-spacing: 0.25px;
+    margin-top: 3px;
+	margin-bottom: 6px;
+}
+.bigdata_tit > strong{
+	color: #1272e0;
+}
+.data_con_wrap{
+	/*width: 545px;*/
+	width: 526px;
+	overflow: hidden;
+}
+.data_con_wrap .graph{
+	float: left;
+	/*width: 284px;*/
+	width: 526px;
+	height: 150px;
+	/*margin-right: 43px;*/
+}
+.data_con_wrap .con_txt{
+	float: left;
+	width: 217px;
+	height: 150px;
+}
+.txt_list{
+	height: 150px;
+}
+.txt_list li{
+	position: relative;
+	width: 100%;
+	padding: 5px 0;
+	border-bottom: 1px solid #384454;
+}
+.txt_list li:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 10px;
+	height: 1px;
+	background-color: #849fc4;
+}
+.txt_list strong{
+	display: inline-block;
+	float: left;
+	font-family: 'NanumSquareB';
+	margin-right: 5px;
+}
+.txt_list .status_a{
+	color: #66fcff;
+}
+.txt_list .status_b{
+	color: #4cafff;
+}
+.txt_list .status_c{
+	color: #ffe566;
+}
+.txt_list .status_d{
+	color: #ff873d;
+}
+.txt_list .status_e{
+	color: #ff4940;
+}
+.txt_list p{
+	font-family: 'NanumSquareR';
+	font-size: 12px;
+	line-height: 18px;
+	color: #fff;
+	letter-spacing: 0.5px;
+}
+.txt_list .mCSB_container{
+	width: 200px;
+}
+.txt_list .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width: 5px;
+	background-color: #47637a;
+    border-radius: 2px;
+}
+.txt_list .mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #183954;
+}
+.txt_list .mCSB_scrollTools .mCSB_draggerContainer{
+	top: -5px;
+}
+
+#chart_magn_modal .modal-dialog{
+	max-width: 748px;
+	margin: 298px auto 0;
+}
+#chart_magn_modal .modal-content{
+	background-color: #0d1c2e;
+    border: 2px solid #0d223b;
+}
+#chart_magn_modal .modal-body{
+	padding: 44px 50px 30px 43px
+}
+#chart_magn_modal .modal-footer{
+	padding: 24px 58px;
+    border-top: 1px solid #1a3352;
+}
+#chart_magn_modal .tit{
+	display: inline-block;
+	font-size: 28px;
+	color: #fff;
+	letter-spacing: 0.25px;
+	line-height: 28px;
+	margin-bottom: 40px;
+}
+#chart_magn_modal .tit strong{
+	color: #1272e0;
+}
+#chart_magn_modal .graph{
+	float: left;
+	/*width: 614px;*/
+	width: 380px;
+	height: 302px;
+	margin-left: 10px;
+	margin-right: 35px;
+}
+#chart_magn_modal .con_txt{
+	float: left;
+	width: 227px;
+	margin-top: 20px;
+}
+#chart_magn_modal .txt_list{
+	height: 277px;
+}
+#chart_magn_modal .txt_list .mCSB_container{
+	width: 210px;
+}
+#chart_magn_modal .btn_cancle{
+	background-color: #b81e16;
+}
+#chart_magn_modal .btn_cancle:hover{
+	background-color: #9e120b;
+}

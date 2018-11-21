@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'NanumSquareL';
+    src: url('./font/NanumSquareL.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumSquareR';
+    src: url('./font/NanumSquareR.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumSquareB';
+    src: url('./font/NanumSquareB.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumSquareEB';
+    src: url('./font/NanumSquareEB.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DroidSansFallback';
+    src: url('./font/DroidSansFallback.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
